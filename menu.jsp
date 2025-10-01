@@ -113,7 +113,7 @@
       </ul>
     </nav>
     <div>
-      <a href="login.jsp" style="color: var(--nav-text);">로그인</a> | <a href="register.jsp" style="color: var(--nav-text);">회원가입</a>
+      <a href="login_2.jsp" style="color: var(--nav-text);">로그인</a> | <a href="register.jsp" style="color: var(--nav-text);">회원가입</a>
     </div>
   </header>
 

@@ -109,6 +109,7 @@
         <li><a href="#">특집</a></li>
         <li><a href="#">모바일</a></li>
         <li><a href="#">웹게임</a></li>
+        <li><a href="팀플/index.jsp">취미</a></li>
       </ul>
     </nav>
     <div>

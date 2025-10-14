@@ -48,6 +48,8 @@
             <a href="movie.jsp">영화</a>
             <a href="board.jsp">게시판</a>
             <a href="event.jsp">이벤트</a>
+            <a href="sport.jsp">스포츠</a>
+            <a href="sportgame.jsp">스포츠 게임</a>
         </nav>
     </header>
 

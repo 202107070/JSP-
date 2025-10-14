@@ -6,7 +6,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>스포츠 게시판 - PlayCulture</title>
+    <title>스포츠 게임 게시판 - PlayCulture</title>
     <style>
         body { margin: 0; font-family: "Segoe UI", sans-serif; background: #f4f4f4; color: #333; }
         header { background: #2c3e50; color: #fff; padding: 20px 0; text-align: center; }
@@ -28,7 +28,7 @@
         .thumbnail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s; }
         .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 80px; object-fit: cover; }
+        .card img { width: 100%; height: 80px; object-fit: cover; } /* sport.jsp에서 80px로 수정된 값 적용 */
         .card-content { padding: 10px; }
         .card-content h3 { margin: 0; font-size: 14px; font-weight: bold; }
         .card-content p { font-size: 12px; color: #555; margin-top: 5px; }
@@ -47,128 +47,122 @@
     </style>
 </head>
 <body>
-    <!-- 헤더 -->
     <header>
-        <h1>스포츠 게시판</h1>
+        <h1>스포츠 게임 게시판</h1>
         <nav>
             <a href="index.jsp">메인</a>
 
         </nav>
     </header>
 
-    <!-- 메인 컨테이너 -->
     <div class="container">
-        <!-- 왼쪽 사이드 -->
         <div class="left-sidebar">
             <div class="section">
-		    <h2>주요 정보 사이트</h2>
-			    <p><a href="https://m.sports.naver.com/index">📢 네이버 스포츠</a></p>
-			    <p><a href="https://www.premierleague.com/en">⚽️ 프리미어 리그</a></p>
-			    <p><a href="https://www.nba.com/">🏀 NBA</a></p>
+		    <h2>주요 게임 정보</h2>
+			    <p><a href="https://www.ea.com/ko-kr/games/ea-sports-fc">🎮 EA FC 공식 사이트</a></p>
+			    <p><a href="https://nba.2k.com/ko-KR/2k26/">🏀 NBA 2K 공식 사이트</a></p>
+			    <p><a href="https://theshow.com/">⚾ MLB 더 쇼 공식 사이트</a></p>
 		</div>
             <div class="section">
-                <h2>🔥 명예의 전당</h2>
-                <p><a href="https://www.youtube.com/watch?v=oPiMOQLa7U8" target="_blank">🔥 축구황제 펠레</a></p>
-                <p><a href="https://www.youtube.com/watch?v=fkke9gSdFHE" target="_blank">🏀 GOAT 마이클 조던</a></p>
+                <h2>🏆 역대 올스타 팀</h2>
+                <p><a href="링크1_주소_입력" target="_blank">⚽️ FC 온라인 역대 올스타</a></p>
+                <p><a href="링크2_주소_입력" target="_blank">🏀 2K 시리즈 베스트 로스터</a></p>
             </div>
             <div class="section">
-	            <h2>📆 주간 경기 일정</h2>
-	            <p>✔️ (토) 04:00 | EPL 맨유 vs 리버풀</p>
-	            <p>✔️ (일) 19:00 | K리그 전북 vs 울산</p>
-	            <p>✔️ (월) 09:00 | NBA 레이커스 vs 보스턴</p>
+	            <h2>📈 주간 메타 변화</h2>
+	            <p>✔️ EA FC: 수비수 성능 버프</p>
+	            <p>✔️ MLB 더 쇼: 투수 변화구 메타</p>
+	            <p>✔️ NBA 2K: 신규 슈팅 배지 등장</p>
         	</div>
         </div>
 
-        <!-- 메인 -->
         <div class="main">
-            <!-- 카드형 게시글 -->
             <div class="thumbnail-grid">
                 <div class="card">
-				    <a href="https://www.youtube.com/watch?v=D92kXnQ3aDY" target="_blank">
-				        <img src="https://img.youtube.com/vi/D92kXnQ3aDY/hqdefault.jpg" alt="국가대표">
+				    <a href="https://www.youtube.com/watch?v=2Y5tkhTq5-k" target="_blank">
+				        <img src="https://img.youtube.com/vi/2Y5tkhTq5-k/hqdefault.jpg" alt="EA FC 공략">
 				    </a>
 				    <div class="card-content">
-				        <h3>최근 국가대표 경기 하이라이트</h3>
-				        <p>치열했던 경기 주요 장면 정리</p>
+				        <h3>EA FC 26 공략</h3>
+				        <p>기본기 공략</p>
 				    </div>
 				</div>
                 <div class="card">
-                	<a href="https://www.youtube.com/watch?v=axNafTgRIeg" target="_blank">
-                   		<img src="https://img.youtube.com/vi/axNafTgRIeg/hqdefault.jpg" alt="축구 이미지">
+                	<a href="https://www.youtube.com/watch?v=pVY2i0yl5kA" target="_blank">
+                   		<img src="https://img.youtube.com/vi/pVY2i0yl5kA/hqdefault.jpg" alt="fc온라인 공략">
         
             		 </a>
                     <div class="card-content">
-                        <h3>국가대표 선수 직캠 모음</h3>
-                        <p>국가대표 공식 유튜브</p>
+                        <h3>FC 온라인 공략</h3>
+                        <p>초보자를 위한 공략</p>
                 
      				</div>
                 </div>
                 <div class="card">
-                    <a href="https://www.youtube.com/watch?v=usU2ETKUxoI" target="_blank">
-                        <img src="https://img.youtube.com/vi/usU2ETKUxoI/hqdefault.jpg" alt="기자회견">
+                    <a href="https://www.youtube.com/watch?v=f_ZkL350y7w" target="_blank">
+                        <img src="https://img.youtube.com/vi/f_ZkL350y7w/hqdefault.jpg" alt="2k 공략">
                     </a>
                     <div class="card-content">
-                        <h3>국가대표 기자회견</h3>
-                        <p>최근 경기 리뷰</p>
+                        <h3>2k26 공략</h3>
+                        <p>드리블 마스터</p>
                     </div>
                 </div>
                 <div class="card">
                     <a href="링크4_주소_입력" target="_blank">
-                        <img src="" alt="훈련 영상">
+                        <img src="" alt="E-Sports 이미지">
                     </a>
                     <div class="card-content">
-                        <h3>국가대표 훈련 비하인드</h3>
-                        <p>경기에선 볼 수 없는 모습</p>
+                        <h3>스포츠 게임 E-Sports 리그 소식</h3>
+                        <p>우승팀 인터뷰 및 경기 분석</p>
                     </div>
                 </div>
                 <div class="card">
                     <a href="링크5_주소_입력" target="_blank">
-                        <img src="" alt="인터뷰">
+                        <img src="" alt="매니저 모드 이미지">
                     </a>
                     <div class="card-content">
-                        <h3>선수별 심층 인터뷰</h3>
-                        <p>경기 후 소감 및 각오</p>
+                        <h3>프랜차이즈 모드 완벽 가이드</h3>
+                        <p>명문팀을 만드는 비결</p>
                     </div>
                 </div>
                 <div class="card">
                     <a href="링크6_주소_입력" target="_blank">
-                        <img src="" alt="스페셜 매치">
+                        <img src="" alt="모바일 게임 이미지">
                     </a>
                     <div class="card-content">
-                        <h3>레전드 스페셜 매치 다시보기</h3>
-                        <p>과거 영웅들의 재회</p>
+                        <h3>모바일 스포츠 게임 추천</h3>
+                        <p>출퇴근길에 즐기는 명작</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 뉴스 리스트 -->
             <div class="news-list">
                 <div class="news-item">
-				  <a href="https://www.youtube.com/watch?v=ifApGM5eZIk" target="_blank">
-				    <img src="https://img.youtube.com/vi/ifApGM5eZIk/hqdefault.jpg" alt="프리미어리그 하이라이트">
+				  <a href="https://www.youtube.com/watch?v=VNnc1fSm1bQ" target="_blank">
+				    <img src="https://img.youtube.com/vi/VNnc1fSm1bQ/hqdefault.jpg" alt="하이라이트">
 				  </a>
 				  <div>
-				    <h4>프리미어리그 주간 하이라이트</h4>
-				    <p>이번 주 경기 주요 장면</p>
+				    <h4>[EA FC] 플레이 하이라이트</h4>
+				    <p>주요 플레이 장면</p>
 				  </div>
 				</div>
 
                 <div class="news-item">
-				  <a href="https://www.youtube.com/watch?v=umBzUhvS5gE" target="_blank">
-				    <img src="https://img.youtube.com/vi/umBzUhvS5gE/hqdefault.jpg" alt="NBA 하이라이트">
+				  <a href="https://www.youtube.com/watch?v=wb7q0lhNMbM" target="_blank">
+				    <img src="https://img.youtube.com/vi/wb7q0lhNMbM/hqdefault.jpg" alt="fc 온라인">
 				  </a>
 				  <div>
-				    <h4>NBA 24-25 스페셜</h4>
-				    <p>새 시즌 개막 전 저번 시즌 몰아보기</p>
+				    <h4>[FC 온라인] 대회 하이라이트</h4>
+				    <p>대회 플레이 장면</p>
 				  </div>
 				</div>
                  <div class="news-item">
-				  <a href="https://www.youtube.com/watch?v=5XVLE4u46cg" target="_blank">
-				    <img src="https://img.youtube.com/vi/5XVLE4u46cg/hqdefault.jpg" alt="MLB 하이라이트">
+				  <a href="https://www.youtube.com/watch?v=U62melMt6FA" target="_blank">
+				    <img src="https://img.youtube.com/vi/U62melMt6FA/hqdefault.jpg" alt="2k 플레이">
 				  </a>
 				  <div>
-				    <h4>MLB 하이라이트</h4>
-				    <p>메이저리그 하이라이트</p>
+				    <h4>[NBA 2k26] 초기 리뷰 영상</h4>
+				    <p>출시 후 초반 플레이</p>
 				  </div>
 				</div>
             </div>
@@ -185,17 +179,16 @@
             </div>
             <div class="section">
                 <h2>실시간 인기 검색</h2>
-                <p>1. 손흥민</p>
-                <p>2. 맨시티 맨유</p>
-                <p>3. 아이콘 매치</p>
-                <p>4. 국가대표</p>
+                <p>1. EA FC 25</p>
+                <p>2. NBA 2K26</p>
+                <p>3. MLB 더 쇼 공략</p>
+                <p>4. 피파 온라인</p>
             </div>
         </div>
     </div>
 
-    <!-- 푸터 -->
     <footer>
-        <p>© 2025 PlayCulture | 스포츠 커뮤니티</p>
+        <p>© 2025 PlayCulture | 스포츠 게임 커뮤니티</p>
     </footer>
 </body>
 </html>

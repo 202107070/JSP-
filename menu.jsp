@@ -104,12 +104,7 @@
     <a href="menu.jsp"><span class="logo">GameLinks</span></a>
     <nav>
       <ul>
-        <li><a href="#">뉴스</a></li>
-        <li><a href="#">리뷰</a></li>
-        <li><a href="#">특집</a></li>
-        <li><a href="#">모바일</a></li>
-        <li><a href="#">웹게임</a></li>
-        <li><a href="팀플/index.jsp">취미</a></li>
+        <li><a href="팀플/index.jsp">메뉴</a></li>
       </ul>
     </nav>
     <div>

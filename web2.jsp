@@ -7,13 +7,13 @@
 <%
     // 컨트롤러에서 넘겨준 article 객체 받기 (예시용)
     String title = (String) request.getAttribute("title");
-    if (title == null) title = "스타듀밸리: 힐링 농장 게임";
+    if (title == null) title = "할로우 나이트 : 실크송 ";
 
     String author = (String) request.getAttribute("author");
     if (author == null) author = "익명";
 
     String content = (String) request.getAttribute("content");
-    if (content == null) content = "스타듀밸리는 농사, 낚시, 채광, 마을 교류, 연애 등 다양한 요소를 즐길 수 있는 힐링형 인디게임입니다.";
+    if (content == null) content = "할로우 나이트 : 실크송은 액션RPG, 메트로배니아, 플랫모퍼 등 다양한 모험을 하며 앞으로 나아가는 액션PRG 게임 입니다.";
 
     int viewCount = request.getAttribute("viewCount") != null ? (Integer) request.getAttribute("viewCount") : 0000;
 
@@ -23,7 +23,7 @@
     String publishedAt = sdf.format(date);
 
     String tags = (String) request.getAttribute("tags");
-    if (tags == null) tags = "농사, 힐링, 인디게임";
+    if (tags == null) tags = "액션RPG, 액션어드벤처, 대전격투게임";
 
     String prevArticle = (String) request.getAttribute("prevArticle");
     if (prevArticle == null) prevArticle = "이전기사";
@@ -35,9 +35,9 @@
     List<String> comments = (List<String>) request.getAttribute("comments");
     if (comments == null) {
         comments = new ArrayList<>();
-        comments.add("정말 재밌는 게임이에요!");
-        comments.add("농사게임 중 최고 👍");
-        comments.add("노가다 시뮬레이션");
+        comments.add("게임이 많이 어렵네요;;");
+        comments.add("다크소울 2인칭 느낌 👍");
+        comments.add("길 찾는게 어려워요..ㅠㅠ");
     }
 %>
 
@@ -192,8 +192,11 @@
       </div>
 
       <div class="hero">
-        <img src="image/Stardew_Valley.jpg" alt="메인 이미지">
-      </div>
+  		<iframe width="100%" height="450" src="https://www.youtube.com/embed/6XGeJwsUP9c" 
+          title="Hollow Knight: Silksong - Release Trailer" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen style="border-radius: 8px;"></iframe>
+		</div>
 
       <div class="content">
         <p><%= content %></p>
@@ -211,9 +214,9 @@
 
       <!-- 이전/다음 기사 -->
       <div class="nav-articles">
-        <a href="web2.jsp">&larr; <%= prevArticle %></a>
-        <a href="web2.jsp"><%= nextArticle %> &rarr;</a>
-      </div>s
+        <a href="web1.jsp">&larr; <%= prevArticle %></a>
+        <a href="web1.jsp"><%= nextArticle %> &rarr;</a>
+      </div>
 
       <!-- 댓글 -->
       <div class="comments">
@@ -240,7 +243,7 @@
         <h3>연관 기사</h3>
         <ul>
           <li><a href="#">PUBG</a></li>
-          <li><a href="web2.jsp">Hollow_Knight_Silksong</a></li>
+          <li><a href="web1.jsp">Stardew_Valley</a></li>
         </ul>
       </div>
 

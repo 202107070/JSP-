@@ -138,7 +138,7 @@
         <div class="title">친구들이랑 하기 좋은 게임 'PEAK'</div>
       </div>
 
-      <div class="news-section">
+      <div class="news-section" onclick="location.href='web2.jsp';" style="cursor:pointer;">
         <div class="news-card">
           <img src="image/광고배너_2.jpg" alt="기사1" />
           <div class="info">

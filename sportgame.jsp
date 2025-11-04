@@ -8,126 +8,297 @@
     <meta charset="UTF-8">
     <title>스포츠 게임 게시판 - PlayCulture</title>
     <style>
-        body { margin: 0; font-family: "Segoe UI", sans-serif; background: #f4f4f4; color: #333; }
-        header { background: #2c3e50; color: #fff; padding: 20px 0; text-align: center; }
-        nav { margin-top: 10px; }
-        nav a { color: #ddd; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { color: #fff; }
-		a { color: inherit; text-decoration: none; } /* 부모 요소의 글씨 색상을 상속받아 파란색을 없애고 밑줄을 없앱니다. */
+        /* 기본 스타일 설정 */
+        body { 
+            margin: 0; 
+            font-family: "Segoe UI", sans-serif; 
+            background: #f4f4f4; 
+            color: #333; 
+        }
+        
+        /* 헤더 스타일 */
+        header { 
+            background: #2c3e50; 
+            color: #fff; 
+            padding: 20px 0; 
+            text-align: center; 
+        }
+        nav { 
+            margin-top: 10px; 
+        }
+        nav a { 
+            color: #ddd; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+        nav a:hover { 
+            color: #fff; 
+        }
+		a { 
+            color: inherit; 
+            text-decoration: none; 
+            /* 부모 요소의 글씨 색상을 상속받아 파란색을 없애고 밑줄을 없앱니다. */
+        }
 							
-        .section p a {		/* 섹션 내 링크 스타일 정의 */
-            display: block; /* 링크가 p 태그 전체 너비를 사용하도록 설정 */
-            padding: 2px 0; /* 상하 여백을 추가하여 가독성 개선 */
+        /* 섹션 내 링크 스타일 */
+        .section p a {		
+            display: block; 
+            padding: 2px 0; 
         }
 
-        .container { display: grid; grid-template-columns: 250px 1fr 250px; gap: 20px; width: 1200px; margin: 20px auto; }
-        .left-sidebar, .right-sidebar { display: flex; flex-direction: column; gap: 20px; }
-        .section { background: #fff; padding: 15px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .section h2 { font-size: 16px; margin-bottom: 10px; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
-
-        .thumbnail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 80px; object-fit: cover; } /* sport.jsp에서 80px로 수정된 값 적용 */
-        .card-content { padding: 10px; }
-        .card-content h3 { margin: 0; font-size: 14px; font-weight: bold; }
-        .card-content p { font-size: 12px; color: #555; margin-top: 5px; }
-
-        .news-list { margin-top: 30px; }
-        .news-item { display: flex; gap: 15px; margin-bottom: 15px; background: #fff; padding: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .news-item img { width: 120px; height: 80px; object-fit: cover; border-radius: 4px; }
-        .news-item h4 { margin: 0; font-size: 14px; font-weight: bold; }
-        .news-item p { font-size: 12px; color: #555; margin-top: 5px; }
+        /* 레이아웃 컨테이너 (3단 구조) */
+        .container { 
+            display: grid; 
+            grid-template-columns: 250px 1fr 250px; 
+            gap: 20px; 
+            width: 1200px; 
+            margin: 20px auto; 
+        }
+        .left-sidebar, .right-sidebar { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+        }
         
-        .login-box input { width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; }
-        .login-box button { width: 100%; padding: 10px; border: none; background: #3498db; color: white; font-weight: bold; border-radius: 4px; cursor: pointer; }
-        .login-box button:hover { background: #2980b9; }
+        /* 섹션(배너) 공통 스타일 */
+        .section { 
+            background: #fff; 
+            padding: 15px; 
+            border-radius: 6px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        .section h2 { 
+            font-size: 16px; 
+            margin-bottom: 10px; 
+            border-bottom: 2px solid #3498db; 
+            padding-bottom: 5px; 
+        }
 
-        footer { background: #2c3e50; color: #aaa; text-align: center; padding: 15px; margin-top: 30px; font-size: 13px; }
+        /* 썸네일 카드 그리드 (3열) */
+        .thumbnail-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+        }
+        .card { 
+            background: #fff; 
+            border-radius: 6px; 
+            overflow: hidden; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            transition: transform 0.2s; 
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+        }
+        /* 카드 이미지 높이 (80px로 설정) */
+        .card img { 
+            width: 100%; 
+            height: 80px; 
+            object-fit: cover; 
+        } 
+        .card-content { 
+            padding: 10px; 
+        }
+        .card-content h3 { 
+            margin: 0; 
+            font-size: 14px; 
+            font-weight: bold; 
+        }
+        .card-content p { 
+            font-size: 12px; 
+            color: #555; 
+            margin-top: 5px; 
+        }
+
+        /* 뉴스 리스트 스타일 */
+        .news-list { 
+            margin-top: 30px; 
+        }
+        .news-item { 
+            display: flex; 
+            gap: 15px; 
+            margin-bottom: 15px; 
+            background: #fff; 
+            padding: 10px; 
+            border-radius: 6px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        .news-item img { 
+            width: 120px; 
+            height: 80px; 
+            object-fit: cover; 
+            border-radius: 4px; 
+        }
+        .news-item h4 { 
+            margin: 0; 
+            font-size: 14px; 
+            font-weight: bold; 
+        }
+        .news-item p { 
+            font-size: 12px; 
+            color: #555; 
+            margin-top: 5px; 
+        }
+        
+        /* 로그인 박스 스타일 */
+        .login-box input { 
+            width: 100%; 
+            padding: 8px; 
+            margin: 8px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        .login-box button { 
+            width: 100%; 
+            padding: 10px; 
+            border: none; 
+            background: #3498db; 
+            color: white; 
+            font-weight: bold; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        .login-box button:hover { 
+            background: #2980b9; 
+        }
+
+        /* 문의 박스 스타일 */
+        .inquiry-box input, .inquiry-box textarea { 
+            width: 100%; 
+            padding: 8px; 
+            margin: 4px 0 8px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            box-sizing: border-box;
+        }
+        .inquiry-box textarea {
+            resize: vertical; 
+            min-height: 50px; 
+        }
+        .inquiry-box button { 
+            width: 100%; 
+            padding: 10px; 
+            border: none; 
+            background: #27ae60; 
+            color: white; 
+            font-weight: bold; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        .inquiry-box button:hover { 
+            background: #2ecc71; 
+        }
+
+        /* 푸터 스타일 */
+        footer { 
+            background: #2c3e50; 
+            color: #aaa; 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 30px; 
+            font-size: 13px; 
+        }
     </style>
 </head>
 <body>
+    <!-- 헤더 영역 -->
     <header>
         <h1>스포츠 게임 게시판</h1>
         <nav>
             <a href="index.jsp">메인</a>
-
         </nav>
     </header>
 
+    <!-- 메인 컨테이너 영역 (3단 레이아웃) -->
     <div class="container">
+        <!-- 왼쪽 사이드바 -->
         <div class="left-sidebar">
+            
+            <!-- 주요 게임 정보 섹션 -->
             <div class="section">
-		    <h2>주요 게임 정보</h2>
-			    <p><a href="https://www.ea.com/ko-kr/games/ea-sports-fc">🎮 EA FC 공식 사이트</a></p>
-			    <p><a href="https://nba.2k.com/ko-KR/2k26/">🏀 NBA 2K 공식 사이트</a></p>
-			    <p><a href="https://theshow.com/">⚾ MLB 더 쇼 공식 사이트</a></p>
-		</div>
+                <h2>주요 게임 정보</h2>
+                <p><a href="https://www.ea.com/ko-kr/games/ea-sports-fc">🎮 EA FC 공식 사이트</a></p>
+                <p><a href="https://nba.2k.com/">🏀 NBA 2K 공식 사이트</a></p>
+                <p><a href="https://mlbtheshow.com/">⚾ MLB 더 쇼 공식 사이트</a></p>
+            </div>
+            
+            <!-- 역대 올스타 팀 섹션 (높이 균형을 위해 항목 추가됨) -->
             <div class="section">
                 <h2>🏆 역대 올스타 팀</h2>
                 <p><a href="링크1_주소_입력" target="_blank">⚽️ FC 온라인 역대 올스타</a></p>
                 <p><a href="링크2_주소_입력" target="_blank">🏀 2K 시리즈 베스트 로스터</a></p>
+                <p><a href="링크3_주소_입력" target="_blank">⚾️ 더 쇼 역대 최강의 팀</a></p>
             </div>
+            
+            <!-- 주간 메타 변화 섹션 (높이 균형을 위해 항목 추가됨) -->
             <div class="section">
-	            <h2>📈 주간 메타 변화</h2>
-	            <p>✔️ EA FC: 수비수 성능 버프</p>
-	            <p>✔️ MLB 더 쇼: 투수 변화구 메타</p>
-	            <p>✔️ NBA 2K: 신규 슈팅 배지 등장</p>
-        	</div>
+                <h2>📈 주간 메타 변화</h2>
+                <p>✔️ EA FC: 수비수 성능 버프</p>
+                <p>✔️ MLB 더 쇼: 투수 변화구 메타</p>
+                <p>✔️ NBA 2K: 신규 슈팅 배지 등장</p>
+                <p>✔️ 마구마구: 새로운 레전드 카드</p>
+            </div>
         </div>
 
+        <!-- 메인 콘텐츠 영역 -->
         <div class="main">
+            <!-- 카드형 게시글 (3열, 6개 항목) -->
             <div class="thumbnail-grid">
+                <!-- 1. EA FC 25 신규 트레일러 -->
                 <div class="card">
-				    <a href="https://www.youtube.com/watch?v=2Y5tkhTq5-k" target="_blank">
-				        <img src="https://img.youtube.com/vi/2Y5tkhTq5-k/hqdefault.jpg" alt="EA FC 공략">
-				    </a>
-				    <div class="card-content">
-				        <h3>EA FC 26 공략</h3>
-				        <p>기본기 공략</p>
-				    </div>
-				</div>
-                <div class="card">
-                	<a href="https://www.youtube.com/watch?v=pVY2i0yl5kA" target="_blank">
-                   		<img src="https://img.youtube.com/vi/pVY2i0yl5kA/hqdefault.jpg" alt="fc온라인 공략">
-        
-            		 </a>
-                    <div class="card-content">
-                        <h3>FC 온라인 공략</h3>
-                        <p>초보자를 위한 공략</p>
-                
-     				</div>
-                </div>
-                <div class="card">
-                    <a href="https://www.youtube.com/watch?v=f_ZkL350y7w" target="_blank">
-                        <img src="https://img.youtube.com/vi/f_ZkL350y7w/hqdefault.jpg" alt="2k 공략">
+                    <a href="링크1_주소_입력" target="_blank">
+                        <img src="https://img.youtube.com/vi/usU2ETKUxoI/hqdefault.jpg" alt="EA FC 이미지">
                     </a>
                     <div class="card-content">
-                        <h3>2k26 공략</h3>
-                        <p>드리블 마스터</p>
+                        <h3>EA FC 25 신규 트레일러 공개</h3>
+                        <p>그래픽 및 애니메이션 대폭 개선</p>
                     </div>
                 </div>
+                <!-- 2. NBA 2K26 마이커리어 가이드 -->
+                <div class="card">
+                    <a href="링크2_주소_입력" target="_blank">
+                        <img src="https://img.youtube.com/vi/axNafTgRIeg/hqdefault.jpg" alt="NBA 2K 이미지">
+                    </a>
+                    <div class="card-content">
+                        <h3>NBA 2K26 마이커리어 가이드</h3>
+                        <p>초보자를 위한 포지션 추천</p>
+                    </div>
+                </div>
+                <!-- 3. MLB 더 쇼 역대급 커브볼 -->
+                <div class="card">
+                    <a href="링크3_주소_입력" target="_blank">
+                        <img src="https://img.youtube.com/vi/D92kXnQ3aDY/hqdefault.jpg" alt="MLB 더 쇼 이미지">
+                    </a>
+                    <div class="card-content">
+                        <h3>MLB 더 쇼 역대급 커브볼</h3>
+                        <p>새로 추가된 투구 메커니즘 분석</p>
+                    </div>
+                </div>
+                <!-- 4. 스포츠 게임 E-Sports 리그 소식 -->
                 <div class="card">
                     <a href="링크4_주소_입력" target="_blank">
-                        <img src="" alt="E-Sports 이미지">
+                        <img src="https://img.youtube.com/vi/axNafTgRIeg/hqdefault.jpg" alt="E-Sports 이미지">
                     </a>
                     <div class="card-content">
                         <h3>스포츠 게임 E-Sports 리그 소식</h3>
                         <p>우승팀 인터뷰 및 경기 분석</p>
                     </div>
                 </div>
+                <!-- 5. 프랜차이즈 모드 완벽 가이드 -->
                 <div class="card">
                     <a href="링크5_주소_입력" target="_blank">
-                        <img src="" alt="매니저 모드 이미지">
+                        <img src="https://img.youtube.com/vi/D92kXnQ3aDY/hqdefault.jpg" alt="매니저 모드 이미지">
                     </a>
                     <div class="card-content">
                         <h3>프랜차이즈 모드 완벽 가이드</h3>
                         <p>명문팀을 만드는 비결</p>
                     </div>
                 </div>
+                <!-- 6. 모바일 스포츠 게임 추천 -->
                 <div class="card">
                     <a href="링크6_주소_입력" target="_blank">
-                        <img src="" alt="모바일 게임 이미지">
+                        <img src="https://img.youtube.com/vi/axNafTgRIeg/hqdefault.jpg" alt="모바일 게임 이미지">
                     </a>
                     <div class="card-content">
                         <h3>모바일 스포츠 게임 추천</h3>
@@ -136,39 +307,44 @@
                 </div>
             </div>
 
+            <!-- 뉴스 리스트 영역 -->
             <div class="news-list">
+                <!-- 1. [EA FC] 대규모 밸런스 패치 노트 -->
                 <div class="news-item">
-				  <a href="https://www.youtube.com/watch?v=VNnc1fSm1bQ" target="_blank">
-				    <img src="https://img.youtube.com/vi/VNnc1fSm1bQ/hqdefault.jpg" alt="하이라이트">
-				  </a>
-				  <div>
-				    <h4>[EA FC] 플레이 하이라이트</h4>
-				    <p>주요 플레이 장면</p>
-				  </div>
-				</div>
-
+                    <a href="링크7_주소_입력" target="_blank">
+                        <img src="https://img.youtube.com/vi/ifApGM5eZIk/hqdefault.jpg" alt="패치 노트 이미지">
+                    </a>
+                    <div>
+                        <h4>[EA FC] 대규모 밸런스 패치 노트</h4>
+                        <p>주요 선수 능력치 변경 사항</p>
+                    </div>
+                </div>
+                <!-- 2. [NBA 2K] 신규 시즌 이벤트 -->
                 <div class="news-item">
-				  <a href="https://www.youtube.com/watch?v=wb7q0lhNMbM" target="_blank">
-				    <img src="https://img.youtube.com/vi/wb7q0lhNMbM/hqdefault.jpg" alt="fc 온라인">
-				  </a>
-				  <div>
-				    <h4>[FC 온라인] 대회 하이라이트</h4>
-				    <p>대회 플레이 장면</p>
-				  </div>
-				</div>
-                 <div class="news-item">
-				  <a href="https://www.youtube.com/watch?v=U62melMt6FA" target="_blank">
-				    <img src="https://img.youtube.com/vi/U62melMt6FA/hqdefault.jpg" alt="2k 플레이">
-				  </a>
-				  <div>
-				    <h4>[NBA 2k26] 초기 리뷰 영상</h4>
-				    <p>출시 후 초반 플레이</p>
-				  </div>
-				</div>
+                    <a href="링크8_주소_입력" target="_blank">
+                        <img src="https://img.youtube.com/vi/umBzUhvS5gE/hqdefault.jpg" alt="이벤트 이미지">
+                    </a>
+                    <div>
+                        <h4>[NBA 2K] 신규 시즌 이벤트</h4>
+                        <p>레전드 선수 카드 획득 기회!</p>
+                    </div>
+                </div>
+                <!-- 3. [MLB 더 쇼] 차기작 개발 루머 -->
+                <div class="news-item">
+                    <a href="링크9_주소_입력" target="_blank">
+                        <img src="https://img.youtube.com/vi/5XVLE4u46cg/hqdefault.jpg" alt="신작 루머 이미지">
+                    </a>
+                    <div>
+                        <h4>[MLB 더 쇼] 차기작 개발 루머</h4>
+                        <p>PS5 독점 해제 가능성 대두</p>
+                    </div>
+                </div>
             </div>
         </div>
         
-         <div class="right-sidebar">
+         <!-- 오른쪽 사이드바 -->
+        <div class="right-sidebar">
+            <!-- 로그인 박스 -->
             <div class="section login-box">
                 <h2>로그인</h2>
                 <form action="loginAction.jsp" method="post">
@@ -177,6 +353,8 @@
                     <button type="submit">로그인</button>
                 </form>
             </div>
+            
+            <!-- 실시간 인기 검색 섹션 -->
             <div class="section">
                 <h2>실시간 인기 검색</h2>
                 <p>1. EA FC 25</p>
@@ -184,9 +362,23 @@
                 <p>3. MLB 더 쇼 공략</p>
                 <p>4. 피파 온라인</p>
             </div>
+            
+            <!-- 문의 사항 배너 (폼 데이터 처리를 위해 inquiryAction.jsp 사용) -->
+            <div class="section inquiry-box">
+                <h2>💌 문의 / 제안</h2>
+                <form action="inquiryAction.jsp" method="post">
+                    <!-- 현재 페이지 URL을 hidden으로 전달하여 처리 후 이 페이지로 돌아오게 함 -->
+                    <input type="hidden" name="returnUrl" value="<%= request.getRequestURI() %>">
+                    <input type="text" name="name" placeholder="이름 (필수)" required>
+                    <input type="email" name="email" placeholder="이메일 (선택)">
+                    <textarea name="content" placeholder="문의 내용을 작성해 주세요." required></textarea>
+                    <button type="submit">문의 등록</button>
+                </form>
+            </div>
         </div>
     </div>
 
+    <!-- 푸터 영역 -->
     <footer>
         <p>© 2025 PlayCulture | 스포츠 게임 커뮤니티</p>
     </footer>

@@ -57,22 +57,37 @@
 
     /* 뉴스 카드 */
     .news-section {margin-top:30px;}
-    .news-card {display:flex; gap:12px; padding:30px 0; border-bottom:1px solid var(--line); width:100%;}
+    .news-card {display:flex; gap:12px; padding:30px 0; border-bottom:1px solid var(--line); width:100%; cursor:pointer;}
     .news-card:last-child {border-bottom:none;}
     .news-card img {width:120px; height:80px; object-fit:cover; border-radius:6px; flex-shrink:0;}
     .news-card .info {flex:1;}
     .news-card h3 {font-size:16px; margin-bottom:6px;}
     .news-card p.meta {font-size:12px; color:var(--muted); margin:0;}
+    .news-card:hover {background:#f8f8f8; border-radius:6px; transition:0.2s;}
 
     /* 인기글 섹션 */
     .popular-section {margin-top:40px;}
     .popular-section h2 {font-size:20px; margin-bottom:15px; color:var(--brand); font-weight:700;}
     .popular-list {display:flex; flex-direction:column; gap:12px;}
-    .popular-item {display:flex; gap:12px; align-items:center; cursor:pointer;}
-    .popular-item img {width:80px; height:60px; object-fit:cover; border-radius:6px;}
+    .popular-item {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      cursor:pointer;
+      padding:6px;
+      border-radius:8px;
+      transition:0.2s;
+    }
+    .popular-item img {
+      width:100px;
+      height:70px;
+      object-fit:cover;
+      border-radius:6px;
+      flex-shrink:0;
+    }
     .popular-item h4 {font-size:15px; margin:0;}
     .popular-item p {font-size:12px; color:var(--muted); margin:2px 0 0;}
-    .popular-item:hover {background:#f0f0f0; border-radius:6px; transition:0.2s;}
+    .popular-item:hover {background:#f0f0f0; transform:translateY(-2px);}
 
     /* 사이드바 */
     .sidebar .widget, .sidebar-left .widget {
@@ -112,7 +127,7 @@
     </div>
   </header>
 
-  <div class="top-banner"> <%-- 탑 배너 아직 추가 안함 --%> 
+  <div class="top-banner">
     <img src="image/탑 배너.jpg" alt="탑 배너" />
   </div>
 
@@ -134,19 +149,22 @@
     <!-- 메인 컨텐츠 -->
     <main class="main">
       <div class="headline">
-        <img src="image/PEAK.jpg" alt="메인 뉴스" /> <%-- 메인 사진 수정할 예정 --%> 
+        <img src="image/PEAK.jpg" alt="메인 뉴스" />
         <div class="title">친구들이랑 하기 좋은 게임 'PEAK'</div>
       </div>
 
-      <div class="news-section" onclick="location.href='web2.jsp';" style="cursor:pointer;">
-        <div class="news-card">
+      <div class="news-section">
+        <!-- 첫 번째 뉴스 -->
+        <div class="news-card" onclick="location.href='web2.jsp';">
           <img src="image/광고배너_2.jpg" alt="기사1" />
           <div class="info">
             <h3>9월 4일 사냥이 시작 된다(Hollow_Knight)</h3>
             <p class="meta">신재연 기자 • 2025-09-14</p>
           </div>
         </div>
-        <div class="news-card" onclick="location.href='web1.jsp';" style="cursor:pointer;">
+
+        <!-- 두 번째 뉴스 -->
+        <div class="news-card" onclick="location.href='web1.jsp';">
           <img src="image/Stardew_Valley.jpg" alt="기사2" />
           <div class="info">
             <h3>혼자서 하기 좋은 힐링 게임</h3>
@@ -158,31 +176,29 @@
         <div class="popular-section">
           <h2>🔥 인기글</h2>
           <div class="popular-list">
-            <div class="popular-item" onclick="location.href='#';">
-              <img src="popular1.jpg" alt="인기글1" />
+            <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/3241660/REPO/';">
+              <img src="image/REPO.jpg" alt="인기글1" />
               <div>
-                <h4>혼자서도 즐길 수 있는 게임 추천</h4>
+                <h4>4인 인기 공포게임 R.E.P.O. 35% 할인중!!</h4>
                 <p>2025-09-13</p>
               </div>
             </div>
-            <div class="popular-item" onclick="location.href='#';">
-              <img src="popular2.jpg" alt="인기글2" />
+            <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/3167020/Escape_From_Duckov/';">
+              <img src="image/Duckov.jpg" alt="인기글2" />
               <div>
-                <h4>PEAK 게임 리뷰</h4>
-                <p>2025-09-12</p>
+                <h4>PVPE 새로운 타르코프류 비대칭 쿼터뷰 총게임</h4>
+                <p>2025-10-16</p>
               </div>
             </div>
-            <div class="popular-item" onclick="location.href='#';">
-              <img src="popular3.jpg" alt="인기글3" />
+            <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/2060160/_/?l=koreana';">
+              <img src="image/peasant.jpg" alt="인기글3" />
               <div>
-                <h4>Stardew Valley 힐링 플레이</h4>
+                <h4>코딩 할줄 아는 사람에게 추천!! '농부는 대체되었다'</h4>
                 <p>2025-09-11</p>
               </div>
             </div>
           </div>
         </div>
-        <!-- 인기글 섹션 끝 -->
-        
       </div>
     </main>
 

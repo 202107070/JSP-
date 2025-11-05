@@ -50,7 +50,7 @@
     <div class="logo">GameLinks<span class="dot">.</span></div>
     <h1>로그인</h1>
     
-    <form action="login.jsp" method="post">
+    <form action="login_2.jsp" method="post">
       <input type="text" name="username" placeholder="아이디 또는 이메일" required />
       <input type="password" name="password" placeholder="비밀번호" required />
       
@@ -82,7 +82,7 @@
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // 예시: 아이디와 비밀번호가 "user"이면 로그인 성공
+        // 예시: 아이디와 비밀번호가 "user"이면 로그인 성공 user로만 됨
         if("user".equals(username) && "user".equals(password)) {
             session.setAttribute("username", username);
             response.sendRedirect("menu.jsp"); // 로그인 성공 → menu.jsp

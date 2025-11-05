@@ -49,7 +49,7 @@
     </form>
 
     <div class="options">
-      이미 계정이 있으신가요? <a href="login.jsp">로그인</a>
+      이미 계정이 있으신가요? <a href="login_2.jsp">로그인</a>
     </div>
   </div>
 </div>

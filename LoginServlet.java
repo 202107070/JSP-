@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             // 로그인 실패 → 다시 login.jsp로
             request.setAttribute("error", "아이디 또는 비밀번호가 올바르지 않습니다.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("login_2.jsp").forward(request, response);
         }
     }
 }

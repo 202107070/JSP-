@@ -128,7 +128,7 @@
   </header>
 
   <div class="top-banner">
-    <img src="image/탑 배너.jpg" alt="탑 배너" />
+    <img src="image/탑 배너_2.jpg" alt="탑 배너" />
   </div>
 
   <div class="container">

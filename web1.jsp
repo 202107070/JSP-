@@ -253,24 +253,24 @@
   <div class="card">
     <h3>🔥 인기글</h3>
     <div class="popular-list">
-      <div class="popular-item" onclick="location.href='#';" style="cursor:pointer; display:flex; gap:10px; margin-bottom:12px;">
-        <img src="popular1.jpg" alt="인기글1" style="width:80px; height:60px; object-fit:cover; border-radius:6px;">
+      <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/3241660/REPO/';" style="cursor:pointer; display:flex; gap:10px; margin-bottom:12px;">
+        <img src="image/REPO.jpg" alt="인기글1" style="width:80px; height:60px; object-fit:cover; border-radius:6px;">
         <div>
-          <h4 style="margin:0; font-size:14px;">혼자서도 즐길 수 있는 게임 추천</h4>
+          <h4 style="margin:0; font-size:14px;">4인 인기 공포게임 R.E.P.O.</h4>
           <p style="margin:2px 0 0; font-size:12px; color:#666;">2025-09-13</p>
         </div>
       </div>
-      <div class="popular-item" onclick="location.href='#';" style="cursor:pointer; display:flex; gap:10px; margin-bottom:12px;">
-        <img src="popular2.jpg" alt="인기글2" style="width:80px; height:60px; object-fit:cover; border-radius:6px;">
+      <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/3167020/Escape_From_Duckov/';" style="cursor:pointer; display:flex; gap:10px; margin-bottom:12px;">
+        <img src="image/Duckov.jpg" alt="인기글2" style="width:80px; height:60px; object-fit:cover; border-radius:6px;">
         <div>
-          <h4 style="margin:0; font-size:14px;">PEAK 게임 리뷰</h4>
+          <h4 style="margin:0; font-size:14px;">새로운 타르코프류 비대칭 쿼터뷰 총게임</h4>
           <p style="margin:2px 0 0; font-size:12px; color:#666;">2025-09-12</p>
         </div>
       </div>
-      <div class="popular-item" onclick="location.href='#';" style="cursor:pointer; display:flex; gap:10px;">
-        <img src="popular3.jpg" alt="인기글3" style="width:80px; height:60px; object-fit:cover; border-radius:6px;">
+      <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/2060160/_/?l=koreana';" style="cursor:pointer; display:flex; gap:10px;">
+        <img src="image/peasant.jpg" alt="인기글3" style="width:80px; height:60px; object-fit:cover; border-radius:6px;">
         <div>
-          <h4 style="margin:0; font-size:14px;">Stardew Valley 힐링 플레이</h4>
+          <h4 style="margin:0; font-size:14px;">코딩 할줄 아는 사람에게 추천!! '농부는 대체되었다</h4>
           <p style="margin:2px 0 0; font-size:12px; color:#666;">2025-09-11</p>
         </div>
       </div>

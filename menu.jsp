@@ -179,7 +179,7 @@
             <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/3241660/REPO/';">
               <img src="image/REPO.jpg" alt="인기글1" />
               <div>
-                <h4>4인 인기 공포게임 R.E.P.O. 35% 할인중!!</h4>
+                <h4>4인 인기 공포게임 R.E.P.O.</h4>
                 <p>2025-09-13</p>
               </div>
             </div>

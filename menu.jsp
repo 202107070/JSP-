@@ -37,7 +37,7 @@
     nav ul {display:flex; list-style:none; gap:20px; font-size:15px; flex-wrap:wrap;}
     nav ul li a {color: var(--nav-text); font-weight:600;}
 
-    /* 배너 */
+    /* 탑 배너 */
     .top-banner {text-align:center; margin:10px 0;}
     .top-banner img {width:1200px; height:200px; object-fit:cover; border-radius:10px;}
 

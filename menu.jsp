@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YuhanGames - 메인</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -63,7 +63,7 @@
     .news-card .info {flex:1;}
     .news-card h3 {font-size:16px; margin-bottom:6px;}
     .news-card p.meta {font-size:12px; color:var(--muted); margin:0;}
-    .news-card:hover {background:#f8f8f8; border-radius:6px; transition:0.2s;}
+    .news-card:hover {background:#f8f8f8; border-radius:6px; transition:0.2s; padding:30px 10px; margin: 0 -10px;} 
 
     /* 인기글 섹션 */
     .popular-section {margin-top:40px;}
@@ -98,6 +98,33 @@
     .sidebar .widget ul li, .sidebar-left .widget ul li {
       margin-bottom:8px; font-size:14px; word-break:break-word; white-space:normal; line-height:1.4;
     }
+    
+    /* 수정된 부분: 게시글 작성 영역 스타일 - 테두리 및 배경색 완전히 제거 */
+    .write-box {
+      /* border, background, border-radius 제거 */
+      padding: 20px 0; /* padding을 위아래로만 유지하거나 조정 */
+      margin-bottom: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .write-box:hover {
+      background: #f0f0f0; /* 호버 시 아주 연한 배경색 적용 */
+      box-shadow: none;
+      transform: translateY(-1px);
+    }
+    .write-box h4 {
+      font-size: 18px;
+      color: var(--brand);
+      font-weight: 700;
+      margin: 0;
+    }
+    .write-box p {
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 5px;
+    }
+
 
     /* 푸터 */
     footer {margin-top:40px; padding:20px; border-top:1px solid var(--line); font-size:13px; text-align:center; color: var(--nav-text); background: var(--nav-bg);}
@@ -119,7 +146,8 @@
     <a href="menu.jsp"><span class="logo">GameLinks</span></a>
     <nav>
       <ul>
-        <li><a href="팀플/index.jsp">메뉴</a></li>
+        <li><a href="/index.jsp">메뉴</a></li> 
+        <li><a href="Board.jsp">게시글</a></li> 
       </ul>
     </nav>
     <div>
@@ -132,8 +160,8 @@
   </div>
 
   <div class="container">
-    <!-- 왼쪽 사이드바 -->
     <aside class="sidebar-left">
+        
       <div class="widget">
         <h4>인기광고</h4>
         <img src="image/PALWORLD.jpg" alt="인기광고" style="width:100%; border-radius:6px;" />
@@ -144,9 +172,14 @@
           <img src="image/BABY_STEPS.jpg" alt="현재 매출 상위권 게임" style="width:100%; border-radius:6px;" />
         </a>
       </div>
+      
+      <a href="Board.jsp" class="write-box">
+          <h4>✍️ 게시글 작성하기</h4>
+          <p>나만의 게임 소식을 공유해보세요!</p>
+      </a>
+
     </aside>
 
-    <!-- 메인 컨텐츠 -->
     <main class="main">
       <div class="headline">
         <img src="image/PEAK.jpg" alt="메인 뉴스" />
@@ -154,7 +187,6 @@
       </div>
 
       <div class="news-section">
-        <!-- 첫 번째 뉴스 -->
         <div class="news-card" onclick="location.href='web2.jsp';">
           <img src="image/광고배너_2.jpg" alt="기사1" />
           <div class="info">
@@ -163,7 +195,6 @@
           </div>
         </div>
 
-        <!-- 두 번째 뉴스 -->
         <div class="news-card" onclick="location.href='web1.jsp';">
           <img src="image/Stardew_Valley.jpg" alt="기사2" />
           <div class="info">
@@ -172,7 +203,6 @@
           </div>
         </div>
 
-        <!-- 인기글 섹션 -->
         <div class="popular-section">
           <h2>🔥 인기글</h2>
           <div class="popular-list">
@@ -202,7 +232,6 @@
       </div>
     </main>
 
-    <!-- 오른쪽 사이드바 -->
     <aside class="sidebar">
       <div class="widget">
         <h4>실시간 인기</h4>

@@ -61,10 +61,24 @@ nav a:hover {
 
 .container {
 	display: grid;
-	grid-template-columns: 250px 1fr 250px;
+	grid-template-columns: 150px 250px 1fr 250px 150px;
 	gap: 20px;
-	width: 1200px;
+	width: 1400px;
 	margin: 20px auto;
+}
+
+.banner-ad {
+	display: flex; /* 이미지를 컨테이너에 맞게 배치 */
+	flex-direction: column;
+	gap: 20px;
+}
+
+.banner-ad img {
+	width: 100%;
+	height: 300px;
+	border-radius: 6px;
+	object-fit: cover;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .left-sidebar, .right-sidebar {
@@ -189,6 +203,7 @@ nav a:hover {
 	padding: 10px;
 	border-radius: 6px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
 }
 
 .news-item img {
@@ -196,6 +211,10 @@ nav a:hover {
 	height: 80px;
 	object-fit: cover;
 	border-radius: 4px;
+}
+
+.news-item:hover {
+	transform: translateY(-5px);
 }
 
 .news-item h4 {
@@ -211,17 +230,18 @@ nav a:hover {
 }
 
 .login-box input {
-	width: 100%;
+	width: 90%;
 	padding: 8px;
-	margin: 8px 0;
-	border: 1px solid #ccc;
+	margin: 4px 0;
+	border: 2px solid #ccc;
 	border-radius: 4px;
 }
 
 .login-box button {
-	width: 100%;
+	width: 100px;
 	padding: 10px;
-	border: none;
+	margin: 2px 2px;
+	border: 2px solid #ccc;
 	background: #3498db;
 	color: white;
 	font-weight: bold;
@@ -249,7 +269,7 @@ footer {
 	padding: 15px 50px; /* 상하좌우 패딩 */
 	color: white;
 	max-width: 600px; /* 로고와 검색창 전체가 차지할 최대 너비 지정 */
-    margin: 0 auto;    /* 컨테이너를 페이지 중앙에 위치시킴 */
+	margin: 0 auto; /* 컨테이너를 페이지 중앙에 위치시킴 */
 }
 
 /* 2. 로고 스타일 */
@@ -329,6 +349,10 @@ footer {
 
 	<!-- 메인 컨테이너 -->
 	<div class="container">
+		<div class="banner-ad">
+			<img src="https://i.imgur.com/your-left-ad-1.jpg" alt="좌측 광고 1">
+			<img src="https://i.imgur.com/your-left-ad-2.jpg" alt="좌측 광고 2">
+		</div>
 		<!-- 왼쪽 사이드 -->
 		<div class="left-sidebar">
 			<div class="section">
@@ -360,21 +384,32 @@ footer {
 			<!-- 썸네일 카드 -->
 			<div class="thumbnail-grid">
 				<div class="card">
-					<img src="https://i.imgur.com/oeN8h2K.jpeg" alt="게임 이미지">
+					<a href="https://vortexgaming.io/postdetail/520733"> <img
+						src="https://th.bing.com/th/id/OIP.qZQVSOrqWRjHX94BY9EYMwHaEK?w=333&h=187&c=7&r=0&o=7&cb=ucfimgc2&pid=1.7&rm=3">
+					</a>
 					<div class="card-content">
 						<h3>발로란트 신규 스킨 공개</h3>
 						<p>신규 무기 스킨이 추가되었습니다!</p>
 					</div>
+
 				</div>
 				<div class="card">
-					<img src="https://i.imgur.com/vu2S1pQ.jpeg" alt="음악 이미지">
+					<a
+						href="https://www.bing.com/videos/riverview/relatedvideo?q=%ec%95%84%ec%9d%b4%ec%9c%a0+%ec%8b%a0%ea%b3%a1&qs=n&sp=-1&ghc=1&lq=0&pq=%ec%95%84%ec%9d%b4%ec%9c%a0+%ec%8b%a0%ea%b3%a1&sc=8-6&sk=&cvid=CA0746040D8E4D00A4536CE7792879CF&ajaxnorecss=1&sid=075BB83B3DEF66901A93AE983C98671E&jsoncbid=0&ajaxsydconv=1&ru=%2fsearch%3fq%3d%25EC%2595%2584%25EC%259D%25B4%25EC%259C%25A0%2520%25EC%258B%25A0%25EA%25B3%25A1%26qs%3dn%26form%3dQBRE%26sp%3d-1%26ghc%3d1%26lq%3d0%26pq%3d%25EC%2595%2584%25EC%259D%25B4%25EC%259C%25A0%2520%25EC%258B%25A0%25EA%25B3%25A1%26sc%3d8-6%26sk%3d%26cvid%3dCA0746040D8E4D00A4536CE7792879CF%26ajaxnorecss%3d1%26sid%3d075BB83B3DEF66901A93AE983C98671E%26format%3dsnrjson%26jsoncbid%3d0%26ajaxsydconv%3d1&mmscn=vwrc&mid=7CAF855F10D66EEA3B407CAF855F10D66EEA3B40&FORM=WRVORC&ntb=1&msockid=3665e96ec05611f09263c28199dfaed9">
+						<img
+						src="https://th.bing.com/th/id/OIP.Mu3KNQxoAFdcr9zIP65y1wHaKn?w=186&h=267&c=7&r=0&o=7&cb=ucfimgc2&pid=1.7&rm=3">
+					</a>
 					<div class="card-content">
 						<h3>아이유 신곡 발매</h3>
 						<p>이번 신곡은 감성 발라드입니다.</p>
 					</div>
 				</div>
 				<div class="card">
-					<img src="https://i.imgur.com/Gz8CNhK.jpeg" alt="영화 이미지">
+					<a
+						href="https://tomorrowsgarden.tistory.com/entry/%EB%93%84-%ED%8C%8C%ED%8A%B82-%EC%A4%84%EA%B1%B0%EB%A6%AC-%EA%B0%9C%EB%B4%89%EC%9D%BC-%EC%BA%90%EC%8A%A4%ED%8C%85%EA%B9%8C%EC%A7%80-%ED%95%9C%EB%88%88%EC%97%90-%EC%A0%95%EB%A6%AC">
+						<img
+						src="https://th.bing.com/th/id/OIP.qog32us4mbwvs8KitkSfzQHaKn?w=138&h=198&c=7&r=0&o=7&cb=ucfimgc2&pid=1.7&rm=3">
+					</a>
 					<div class="card-content">
 						<h3>듄: 파트2 개봉</h3>
 						<p>올해 가장 기대되는 블록버스터!</p>
@@ -385,21 +420,29 @@ footer {
 			<!-- 뉴스/최신 동향 -->
 			<div class="news-list">
 				<div class="news-item">
-					<img src="https://i.imgur.com/Q6aZpX1.jpeg" alt="뉴스 이미지">
+					<a href="https://www.gamemeca.com/view.php?gid=1752312"> <img
+						src="https://th.bing.com/th/id/OIP.H7VcVzX46atGSxDLgYfC5gHaEK?w=326&h=183&c=7&r=0&o=7&cb=ucfimgc2&pid=1.7&rm=3">
+					</a>
 					<div>
 						<h4>[게임] 스타필드 신규 확장팩 공개</h4>
 						<p>베데스다에서 대규모 확장팩 발표 소식!</p>
 					</div>
 				</div>
 				<div class="news-item">
-					<img src="https://i.imgur.com/xUAZQCd.jpeg" alt="뉴스 이미지">
+					<a
+						href="https://www.chosun.com/entertainments/enter_general/2025/11/12/G4ZGKMTCME4DEZBXGY3DAMLEGY/">
+						<img
+						src="https://th.bing.com/th/id/OIP.mVWUm2ZkmdnnccfZamiWDwHaEK?w=312&h=180&c=7&r=0&o=7&cb=ucfimgc2&pid=1.7&rm=3">
+					</a>
 					<div>
 						<h4>[음악] 방탄소년단 컴백 예고</h4>
 						<p>전 세계 팬들이 기다리던 앨범 소식 공개!</p>
 					</div>
 				</div>
 				<div class="news-item">
-					<img src="https://i.imgur.com/4fWEDkK.jpeg" alt="뉴스 이미지">
+					<a href="https://www.youtube.com/watch?v=SVqZ6PGLGtM"> <img
+						src="https://i.ytimg.com/vi/SVqZ6PGLGtM/maxresdefault.jpg">
+					</a>
 					<div>
 						<h4>[영화] 어벤져스 신작 루머</h4>
 						<p>마블 차기작에 대한 새로운 정보 유출!</p>
@@ -452,7 +495,10 @@ footer {
 				<form action="loginAction.jsp" method="post">
 					<input type="text" name="userid" placeholder="아이디"> <input
 						type="password" name="password" placeholder="비밀번호">
-					<button type="submit">로그인</button>
+					<button type="submit" name="login">로그인</button>
+					<button type="button" onclick="location.href='register.jsp'">회원가입</button>
+					<button type="button" onclick="location.href='delete.jsp'">회원탈퇴</button>
+					<button type="button" onclick="location.href='profile.jsp'">내 정보</button>
 				</form>
 			</div>
 			<div class="section">
@@ -468,6 +514,10 @@ footer {
 				<p>9. 방탄소년단</p>
 				<p>10. 리그오브레전드</p>
 			</div>
+		</div>
+		<div class="banner-ad">
+			<img src="https://i.imgur.com/your-right-ad-1.jpg" alt="우측 광고 1">
+			<img src="https://i.imgur.com/your-right-ad-2.jpg" alt="우측 광고 2">
 		</div>
 	</div>
 

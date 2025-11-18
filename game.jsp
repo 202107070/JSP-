@@ -11,6 +11,7 @@
 	<%@ include file="header.jsp"%>
 
 	<div class="container">
+		<div class="banner-ad"></div>
 		<%@ include file="left-sidebar.jsp"%>
 		<div class="main">
 			<h2>🎮 게임 소식</h2>
@@ -32,6 +33,8 @@
 			</div>
 		</div>
 		<%@ include file="right-sidebar.jsp"%>
+
+		<div class="banner-ad"></div>
 	</div>
 
 	<%@ include file="footer.jsp"%>

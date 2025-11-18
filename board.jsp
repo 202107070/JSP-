@@ -43,108 +43,21 @@ if (newPost != null && !newPost.trim().equals("")) {
 <head>
 <meta charset="UTF-8">
 <title>yuven</title>
-<style>
-body {
-	margin: 0;
-	font-family: "Segoe UI", sans-serif;
-	background: #f4f4f4;
-	color: #333;
-}
-
-header {
-	background: #2c3e50;
-	color: #fff;
-	padding: 20px 0;
-	text-align: center;
-}
-
-nav {
-	margin-top: 10px;
-}
-
-nav a {
-	color: #ddd;
-	margin: 0 15px;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-nav a:hover {
-	color: #fff;
-}
-
-.container {
-	display: grid;
-	grid-template-columns: 250px 1fr 250px;
-	gap: 20px;
-	width: 1200px;
-	margin: 20px auto;
-}
-
-.left-sidebar, .right-sidebar {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
-.section {
-	background: #fff;
-	padding: 15px;
-	border-radius: 6px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.section h2 {
-	font-size: 16px;
-	margin-bottom: 10px;
-	border-bottom: 2px solid #3498db;
-	padding-bottom: 5px;
-}
-
-.login-box input {
-	width: 100%;
-	padding: 8px;
-	margin: 8px 0;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-}
-
-.login-box button {
-	width: 100%;
-	padding: 10px;
-	border: none;
-	background: #3498db;
-	color: white;
-	font-weight: bold;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-.login-box button:hover {
-	background: #2980b9;
-}
-
-footer {
-	background: #2c3e50;
-	color: #aaa;
-	text-align: center;
-	padding: 15px;
-	margin-top: 30px;
-	font-size: 13px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<%@ include file="header.jsp"%>
 
 	<div class="container">
-		<%@ include file="left-sidebar.jsp" %>
+		<div class="banner-ad"></div>
+		<%@ include file="left-sidebar.jsp"%>
 
 		<div class="main">
 			<h2>게시판</h2>
 			<form method="post">
-				글쓰기: <textarea name="post" cols="50" rows="10"></textarea>
-				 <input type="submit" value="등록">
+				글쓰기:
+				<textarea name="post" cols="50" rows="10"></textarea>
+				<input type="submit" value="등록">
 			</form>
 			<hr>
 			<ul>
@@ -157,8 +70,10 @@ footer {
 				%>
 			</ul>
 		</div>
-		
-		<%@ include file="right-sidebar.jsp" %>
+
+		<%@ include file="right-sidebar.jsp"%>
+
+		<div class="banner-ad"></div>
 	</div>
 
 

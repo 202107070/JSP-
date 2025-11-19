@@ -3,8 +3,13 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="com.mygame.board.Comment" %>
+<%@ page import="com.mygame.board.CommentDAO" %> 
 
 <%
+    // ✅ 1. 현재 게시글의 ID 정의
+    String articleId = "web1"; 
+    
     // 컨트롤러에서 넘겨준 article 객체 받기 (예시용)
     String title = (String) request.getAttribute("title");
     if (title == null) title = "스타듀밸리: 힐링 농장 게임";
@@ -31,14 +36,8 @@
     String nextArticle = (String) request.getAttribute("nextArticle");
     if (nextArticle == null) nextArticle = "다음기사";
 
-    // 댓글 리스트 (DB 대신 예시용)
-    List<String> comments = (List<String>) request.getAttribute("comments");
-    if (comments == null) {
-        comments = new ArrayList<>();
-        comments.add("정말 재밌는 게임이에요!");
-        comments.add("농사게임 중 최고 👍");
-        comments.add("노가다 시뮬레이션");
-    }
+    // ✅ 2. CommentDAO에서 해당 ID의 댓글 데이터를 가져옵니다.
+    List<Comment> comments = CommentDAO.getCommentsByArticleId(articleId); 
 %>
 
 <!DOCTYPE html>
@@ -125,6 +124,13 @@
        margin-bottom: 25px;
     }
     .comments h3 { margin-bottom: 10px; }
+    .comment-meta {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+    }
     .comment-box {
       border: 1px solid var(--border);
       border-radius: 6px;
@@ -199,7 +205,6 @@
         <p><%= content %></p>
       </div>
 
-      <!-- 해시태그 -->
       <div class="tags">
         <% if (tags != null && !tags.isEmpty()) {
              String[] tagList = tags.split(",");
@@ -209,21 +214,26 @@
            } %>
       </div>
 
-      <!-- 이전/다음 기사 -->
       <div class="nav-articles">
         <a href="web2.jsp">&larr; <%= prevArticle %></a>
         <a href="web2.jsp"><%= nextArticle %> &rarr;</a>
-      </div>s
+      </div>
 
-      <!-- 댓글 -->
       <div class="comments">
-        <h3>댓글</h3>
-        <% for (String c : comments) { %>
-          <div class="comment-box"><%= c %></div>
+        <h3>댓글 (<%= comments.size() %>)</h3>
+        
+        <% for (Comment c : comments) { %>
+          <div class="comment-box">
+            <div class="comment-meta">
+                <span class="author"><%= c.getAuthor() %></span>
+                <span class="date"><%= c.getPublishedAt() %></span>
+            </div>
+            <%= c.getContent() %>
+          </div>
         <% } %>
 
-        <form class="comment-form" method="post" action="addComment.jsp">
-          <textarea name="comment" placeholder="댓글을 입력하세요..."></textarea>
+        <form class="comment-form" method="post" action="addComment.jsp?id=<%= articleId %>">
+          <textarea name="comment" required placeholder="댓글을 입력하세요..."></textarea>
           <br>
           <button type="submit">등록</button>
         </form>
@@ -231,7 +241,6 @@
     </main>
 
     <aside class="sidebar">
-      <!-- 광고 배너 (사이드바 최상단) -->
       <div class="ad">
         <img src="image/광고배너_2.jpg" alt="광고 배너" width="300" height="250">
       </div>
@@ -249,8 +258,7 @@
         <img src="image/광고배너.jpg" alt="인기 게임" style="width:100%">
       </div>
       
-      <!-- ✅ 인기글 섹션 -->
-  <div class="card">
+      <div class="card">
     <h3>🔥 인기글</h3>
     <div class="popular-list">
       <div class="popular-item" onclick="location.href='https://store.steampowered.com/app/3241660/REPO/';" style="cursor:pointer; display:flex; gap:10px; margin-bottom:12px;">
@@ -276,8 +284,7 @@
       </div>
     </div>
   </div>
-  <!-- ✅ 인기글 섹션 끝 -->
-    </aside>
+  </aside>
   </div>
 
   <footer>

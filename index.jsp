@@ -331,21 +331,19 @@ footer {
     }
 </script>
 <body>
-	<!-- 헤더 -->
-	<header>
-		<div class="header-container">
-			<div class="logo">yuven</div>
-			<form class="search-bar" action="#">
-				<input type="text" placeholder="..." class="search-input">
-				<button type="submit" class="search-button">🔍</button>
-			</form>
-		</div>
-		<nav>
-			<a href="game.jsp">게임</a> <a href="music.jsp">음악</a> <a
-				href="movie.jsp">영화</a> <a href="board.jsp">게시판</a> <a
-				href="event.jsp">이벤트</a>
-		</nav>
-	</header>
+    <!-- 헤더 -->
+    <header>
+        <h1>문화 취미 커뮤니티</h1>
+        <nav>
+            <a href="game.jsp">게임</a>
+            <a href="music.jsp">음악</a>
+            <a href="movie.jsp">영화</a>
+            <a href="board.jsp">게시판</a>
+            <a href="event.jsp">이벤트</a>
+            <a href="sport.jsp">스포츠</a>
+            <a href="sportgame.jsp">스포츠 게임</a>
+        </nav>
+    </header>
 
 	<!-- 메인 컨테이너 -->
 	<div class="container">

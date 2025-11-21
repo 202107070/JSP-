@@ -1,15 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+	
 <!-- 오른쪽 사이드 -->
 <div class="right-sidebar">
-	<div class="section login-box">
-		<h2>로그인</h2>
-		<form action="loginAction.jsp" method="post">
-			<input type="text" name="userid" placeholder="아이디"> <input
-				type="password" name="password" placeholder="비밀번호">
-			<button type="submit">로그인</button>
-		</form>
-	</div>
+
+	<%@ include file="loginbox.jsp"%>
 	<div class="section">
 		<h2>실시간 인기 검색</h2>
 		<p>1. 발로란트</p>

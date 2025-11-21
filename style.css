@@ -1,0 +1,345 @@
+body {
+	margin: 0;
+	font-family: "Segoe UI", sans-serif;
+	background: #f4f4f4;
+	color: #333;
+}
+
+header {
+	background: #2c3e50;
+	color: #fff;
+	padding: 20px 0 0 0;
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 24px;
+}
+
+nav {
+	display: flex; /* 모든 메뉴를 가로로 정렬 */
+	justify-content: center; /* 메뉴들을 가운데 정렬 */
+	background: #f4f4f4; /* 배경색 통일 */
+	padding: 10px 0; /* 상하 여백 */
+	gap: 5px; /* 메뉴 항목 사이 간격 */
+}
+
+nav a {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 7px 2px; /* 메뉴 규격 통일을 위한 패딩 */
+	font-size: 18px;
+	white-space: nowrap; /* 메뉴가 줄바꿈되지 않게 방지 */
+}
+
+nav a:hover {
+	color: #DB0000;
+}
+
+.dropdown {
+	display: inline-block;
+	position: relative; /* ⭐️ 핵심: 하위 메뉴의 기준점 설정 ⭐️ */
+	padding: 0 10px; /* 앵커 태그와 동일한 좌우 여백 */
+}
+
+.dropdown:hover .submenu {
+	display: block;
+}
+
+.dropdown-btn {
+	/* 앵커 태그와 규격 맞추기 */
+	font-weight: bold;
+	padding: 7px 0; /* 앵커 태그와 높이를 맞추기 위한 패딩 조정 */
+	font-size: 18px;
+	/* 배경/테두리 제거 및 색상 통일 */
+	background: transparent; /* ⭐️ 배경색 투명으로 설정 ⭐️ */
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #000000;
+}
+
+.dropdown-btn:hover {
+	color: #DB0000;
+}
+
+.submenu {
+	display: none; /*처음에 안보이게*/
+	width: 150px;
+	position: absolute;
+	top: 100%; /* 부모 요소 바로 아래에 겹쳐서 나타남 */
+	left: 50%;
+	transform: translateX(-50%); /* 중앙 정렬 */
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	z-index: 10;
+	background: #EAEAEA;
+}
+
+.submenu a {
+	display: block; /*a 태그는 가로배치 이므로 세로배치로 변경*/
+	padding: 7px;
+	text-align: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 150px 250px 1fr 250px 150px;
+	gap: 20px;
+	width: 1400px;
+	margin: 20px auto;
+}
+
+.banner-ad {
+	display: flex; /* 이미지를 컨테이너에 맞게 배치 */
+	flex-direction: column;
+	gap: 20px;
+}
+
+.banner-ad img {
+	width: 100%;
+	height: 300px;
+	border-radius: 6px;
+	object-fit: cover;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-sidebar, .right-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.section {
+	background: #fff;
+	padding: 15px;
+	border-radius: 6px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+	font-size: 16px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 5px;
+}
+
+.thumbnail-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card {
+	background: #fff;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+.card img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+}
+
+.card-content {
+	padding: 10px;
+}
+
+.card-content h3 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 12px;
+	color: #555;
+	margin-top: 5px;
+}
+
+.news-list {
+	margin-top: 30px;
+}
+
+/* 게시판 목록 스타일 */
+.board-list {
+	margin-top: 30px;
+	padding: 15px;
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.board-list h2 {
+	font-size: 16px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 5px;
+}
+
+.board-list ul {
+	list-style: none;
+	padding: 0;
+}
+
+.board-item {
+	padding: 5px 0;
+	border-bottom: 1px dotted #eee;
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+}
+
+.board-item a {
+	text-decoration: none;
+	color: #333;
+	max-width: 85%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 신규 글 ('N') 스타일 */
+.board-item .meta {
+	font-weight: bold;
+	color: #95a5a6; /* 기본 조회수 색상 */
+	min-width: 30px;
+	text-align: right;
+}
+
+.board-item.new .meta {
+	color: #e74c3c; /* New 글자 빨간색 */
+}
+
+.news-item {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 15px;
+	background: #fff;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+}
+
+.news-item img {
+	width: 120px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.news-item:hover {
+	transform: translateY(-5px);
+}
+
+.news-item h4 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.news-item p {
+	font-size: 12px;
+	color: #555;
+	margin-top: 5px;
+}
+
+.login-box input {
+	width: 90%;
+	padding: 8px;
+	margin: 4px 0;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+}
+
+.login-box button {
+	width: 100px;
+	padding: 10px;
+	margin: 2px 2px;
+	border: 2px solid #ccc;
+	background: #3498db;
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.login-box button:hover {
+	background: #2980b9;
+}
+
+footer {
+	background: #2c3e50;
+	color: #aaa;
+	text-align: center;
+	padding: 15px;
+	margin-top: 30px;
+	font-size: 13px;
+}
+/* 1. 전체 컨테이너 설정: 가로 배치 */
+.header-container {
+	display: flex; /* Flexbox 활성화 */
+	align-items: center; /* 세로 중앙 정렬 */
+	background-color: #2c3e50; /* 이미지와 유사한 배경색 */
+	padding: 15px 50px; /* 상하좌우 패딩 */
+	color: white;
+	max-width: 600px; /* 로고와 검색창 전체가 차지할 최대 너비 지정 */
+	margin: 0 auto; /* 컨테이너를 페이지 중앙에 위치시킴 */
+}
+
+/* 2. 로고 스타일 */
+.logo {
+	font-size: 40px;
+	font-weight: bold;
+	color: #EAEAEA; /* INVEN 로고 색상 */
+	margin-right: 40px; /* 검색창과의 간격 */
+	letter-spacing: -2px; /* 글자 간격 조정 */
+}
+
+/* 3. 검색 폼 (검색창 전체) 스타일 */
+.search-bar {
+	display: flex; /* 검색 입력창과 버튼을 가로로 배치 */
+	border: 2px solid #EAEAEA; /* 테두리 색상 */
+	border-radius: 8px; /* 모서리 둥글게 */
+	overflow: hidden; /* input과 button의 경계를 감춤 */
+	flex-grow: 1; /* 남은 공간을 검색창이 최대한 차지하도록 */
+	max-width: 400px; /* 검색창의 최대 너비 제한 (선택 사항) */
+	height: 50px; /* 검색창 높이 */
+}
+
+/* 4. 입력 창 스타일 */
+.search-input {
+	flex-grow: 1; /* 최대한 많은 공간 차지 */
+	border: none;
+	padding: 0 15px;
+	font-size: 16px;
+	background-color: transparent; /* 배경색 투명 */
+	color: white; /* 입력 글자색 */
+	outline: none; /* 클릭 시 생기는 파란 테두리 제거 */
+	/* 플레이스홀더 텍스트 스타일 */
+	-webkit-input-placeholder: #ccc; /* Chrome, Safari */
+	-moz-placeholder: #ccc; /* Firefox 19+ */
+	-ms-input-placeholder: #ccc; /* IE 10+ */
+	placeholder: #ccc; /* Standard */
+	text-align: center; /* 가운데 정렬 */
+}
+
+/* 5. 검색 버튼 스타일 */
+.search-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: #e53935; /* 돋보기 색상 */
+	font-size: 20px;
+	padding: 0 15px;
+	transition: background-color 0.2s;
+}

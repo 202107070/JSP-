@@ -4,12 +4,13 @@
 header {
 	background: #2c3e50;
 	color: #fff;
-	padding: 20px 0 0 0;
+	padding: 40px 0 0 0;
 	text-align: center;
 }
 
 header h1 {
 	margin: 0;
+	margin-bottom: 20px;
 	font-size: 24px;
 }
 
@@ -18,22 +19,30 @@ header h1 a{
 	text-decoration: none;
 }
 
+header hr {
+	background: #DDDDDD;
+	margin: 0;
+	height: 1px;
+	border: none;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+}
 
 nav {
 	display: flex; /* 모든 메뉴를 가로로 정렬 */
 	justify-content: center; /* 메뉴들을 가운데 정렬 */
 	background: #f4f4f4; /* 배경색 통일 */
-	padding: 10px 0; /* 상하 여백 */
+	padding: 0; /* 상하 여백 */
 	gap: 5px; /* 메뉴 항목 사이 간격 */
 }
 
 nav a {
-	color: #000000;
+	color: #242424;
 	text-decoration: none;
 	font-weight: bold;
 	padding: 7px 2px; /* 메뉴 규격 통일을 위한 패딩 */
 	font-size: 18px;
 	white-space: nowrap; /* 메뉴가 줄바꿈되지 않게 방지 */
+	margin: 0 15px;
 }
 
 nav a:hover {
@@ -60,7 +69,7 @@ nav a:hover {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	color: #000000;
+	color: #242424;
 }
 
 .dropdown-btn:hover {
@@ -97,4 +106,5 @@ nav a:hover {
 		<a href="music.jsp">음악</a> <a href="movie.jsp">영화</a> <a
 			href="sport.jsp">스포츠</a> <a href="boardmain.jsp">게시판</a>
 	</nav>
+	<hr>
 </header>

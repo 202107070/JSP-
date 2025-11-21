@@ -146,7 +146,7 @@
     <a href="menu.jsp"><span class="logo">GameLinks</span></a>
     <nav>
       <ul>
-        <li><a href="/index.jsp">메뉴</a></li> 
+        <li><a href="index.jsp">메뉴</a></li> 
         <li><a href="Board.jsp">게시글</a></li> 
       </ul>
     </nav>

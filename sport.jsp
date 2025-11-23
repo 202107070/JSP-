@@ -249,6 +249,7 @@
         <h1>스포츠 게시판</h1>
         <nav>
             <a href="index.jsp">메인</a>
+            <a href=menu.jsp">스팀리뷰</a>
         </nav>
     </header>
 

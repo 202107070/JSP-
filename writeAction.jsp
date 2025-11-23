@@ -5,19 +5,21 @@
 
 <%
     // 1. 요청 인코딩 설정 (한글 깨짐 방지)
+    // JSP API: request 객체의 setCharacterEncoding 메소드를 사용하여 요청 데이터 인코딩 설정
     request.setCharacterEncoding("UTF-8");
 
     // 2. 파라미터 받기
+    // JSP API: request.getParameter()를 사용하여 form 태그의 입력값을 수신
     String content = request.getParameter("quickContent");
     String returnUrl = request.getParameter("returnUrl"); // 돌아갈 페이지 주소
 
     // 유효성 검사 (내용이 없으면 저장하지 않음)
     if (content != null && !content.trim().isEmpty()) {
         
-        // 3. application 내장 객체를 사용하여 데이터 공유 (DB 대용)
-        // "quickNewsList"라는 이름으로 리스트를 가져옴
+        // 3. Application 영역을 사용한 데이터 공유 (DB 대용)
+        // JSP API: application 객체는 서버가 실행되는 동안 모든 사용자가 공유하는 전역 객체입니다.
+        // getAttribute()를 사용하여 저장된 뉴스 리스트를 가져옵니다.
         
-        // ⭐️ 수정됨: 노란 줄(Type safety) 경고를 숨기기 위한 어노테이션 추가
         @SuppressWarnings("unchecked")
         List<String> newsList = (List<String>) application.getAttribute("quickNewsList");
         
@@ -30,6 +32,7 @@
         newsList.add(0, content);
         
         // 갱신된 리스트를 다시 application 영역에 저장
+        // JSP API: setAttribute()를 사용하여 갱신된 리스트를 서버 메모리에 저장하여 공유
         application.setAttribute("quickNewsList", newsList);
     }
 

@@ -4,8 +4,9 @@
 <%@ page import="java.util.ArrayList" %>
 
 <%
-    // application 영역에서 저장된 뉴스 리스트 가져오기
-    // ⭐️ 수정됨: Type safety 경고 무시 어노테이션 추가
+    // JSP API: application.getAttribute()
+    // 서버 메모리(application 영역)에 저장된 공유 리스트 'quickNewsList'를 호출합니다.
+    // 이 데이터는 모든 사용자에게 동일하게 보여집니다.
     @SuppressWarnings("unchecked")
     List<String> loadedList = (List<String>) application.getAttribute("quickNewsList");
     
@@ -92,6 +93,7 @@
     <!-- 글쓰기 폼 -->
     <form action="writeAction.jsp" method="post" class="quick-form">
         <!-- 현재 페이지 URL을 숨겨서 보냄 (작성 후 여기로 돌아오기 위해) -->
+        <!-- JSP Expression: request.getRequestURI()로 현재 페이지 경로를 동적으로 할당 -->
         <input type="hidden" name="returnUrl" value="<%= request.getRequestURI() %>">
         <input type="text" name="quickContent" class="quick-input" placeholder="새로운 소식을 공유해주세요! (예: 손흥민 골!)" required>
         <button type="submit" class="quick-btn">등록</button>

@@ -57,6 +57,7 @@
         <h1>스포츠 게시판</h1>
         <nav>
             <a href="index.jsp">메인</a>
+            <a href="menu.jsp">스팀리뷰</a>
         </nav>
     </header>
 
@@ -182,7 +183,12 @@
 				</div>
             </div>
             
-            <!-- ⭐ 한줄 뉴스 배너 모듈 포함 (뉴스 리스트 아래) ⭐ -->
+            <!-- 한줄 뉴스 배너 모듈 포함 (뉴스 리스트 아래) -->
+            <!-- 
+                JSP Action Tag (jsp:include):
+                다른 JSP 파일(quickBoard.jsp)을 현재 페이지에 포함시켜 모듈처럼 사용합니다.
+                이를 통해 코드의 재사용성을 높이고 유지보수를 용이하게 합니다.
+            -->
             <jsp:include page="quickBoard.jsp" />
         </div>
         

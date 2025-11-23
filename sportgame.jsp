@@ -255,6 +255,7 @@
         <h1>스포츠 게임 게시판</h1>
         <nav>
             <a href="index.jsp">메인</a>
+            <a href="menu.jsp">스팀리뷰</a>
         </nav>
     </header>
 
@@ -400,7 +401,12 @@
 				</div>
             </div>
             
-            <!-- ⭐ 한줄 뉴스 배너 모듈 포함 (뉴스 리스트 아래) ⭐ -->
+            <!-- 한줄 뉴스 배너 모듈 포함 (뉴스 리스트 아래) -->
+            <!-- 
+                JSP Action Tag (jsp:include):
+                공통 UI 컴포넌트인 '한줄 뉴스(quickBoard.jsp)'를 재사용하기 위해 포함시킴.
+                모든 페이지에서 동일한 뉴스 데이터를 보여줌.
+            -->
             <jsp:include page="quickBoard.jsp" />
         </div>
         

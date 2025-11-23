@@ -47,6 +47,11 @@
         .section p a {		
             display: block; 
             padding: 2px 0; 
+            transition: color 0.2s;
+        }
+        .section p a:hover {
+            color: #3498db;
+            text-decoration: underline;
         }
 
         /* ==================================================================== */
@@ -250,7 +255,6 @@
         <h1>스포츠 게임 게시판</h1>
         <nav>
             <a href="index.jsp">메인</a>
-            <a href=menu.jsp">스팀리뷰</a>
         </nav>
     </header>
 
@@ -272,9 +276,9 @@
             <!-- 주요 게임 정보 섹션 -->
             <div class="section">
                 <h2>주요 게임 정보</h2>
-                <p><a href="https://www.ea.com/ko-kr/games/ea-sports-fc">🎮 EA FC 공식 사이트</a></p>
-                <p><a href="https://nba.2k.com/">🏀 NBA 2K 공식 사이트</a></p>
-                <p><a href="https://mlbtheshow.com/">⚾ MLB 더 쇼 공식 사이트</a></p>
+                <p><a href="https://www.ea.com/ko-kr/games/ea-sports-fc" target="_blank">🎮 EA FC 공식 사이트</a></p>
+                <p><a href="https://nba.2k.com/" target="_blank">🏀 NBA 2K 공식 사이트</a></p>
+                <p><a href="https://mlbtheshow.com/" target="_blank">⚾ MLB 더 쇼 공식 사이트</a></p>
             </div>
             
             <!-- 스포츠 게임 역사 섹션 -->
@@ -285,13 +289,13 @@
                 <p><a href="https://www.youtube.com/watch?v=_tU0Knysv8E" target="_blank">🏀 NBA 2K, 리얼리즘의 시작</a></p>             
             </div>
             
-            <!-- 주간 메타 변화 섹션 -->
+            <!-- 주간 메타 변화 섹션 (링크 적용) -->
             <div class="section">
 	            <h2>📈 주간 메타 변화</h2>
-	            <p>✔️ EA FC: 수비수 성능 버프</p>
-	            <p>✔️ MLB 더 쇼: 투수 변화구 메타</p>
-	            <p>✔️ NBA 2K: 신규 슈팅 배지 등장</p>
-                <p>✔️ 마구마구: 새로운 레전드 카드</p>
+	            <p><a href="https://search.naver.com/search.naver?query=EA+FC+수비수+성능+버프" target="_blank">✔️ EA FC: 수비수 성능 버프</a></p>
+	            <p><a href="https://search.naver.com/search.naver?query=MLB+더+쇼+투수+변화구+메타" target="_blank">✔️ MLB 더 쇼: 투수 변화구 메타</a></p>
+	            <p><a href="https://search.naver.com/search.naver?query=NBA+2K+신규+슈팅+배지" target="_blank">✔️ NBA 2K: 신규 슈팅 배지 등장</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=마구마구+새로운+레전드+카드" target="_blank">✔️ 마구마구: 새로운 레전드 카드</a></p>
         	</div>
         </div>
 
@@ -395,6 +399,9 @@
 				  </div>
 				</div>
             </div>
+            
+            <!-- ⭐ 한줄 뉴스 배너 모듈 포함 (뉴스 리스트 아래) ⭐ -->
+            <jsp:include page="quickBoard.jsp" />
         </div>
         
          <!-- 오른쪽 사이드바 (250px) -->
@@ -409,13 +416,13 @@
                 </form>
             </div>
             
-            <!-- 실시간 인기 검색 섹션 -->
+            <!-- 실시간 인기 검색 섹션 (링크 적용) -->
             <div class="section">
                 <h2>실시간 인기 검색</h2>
-                <p>1. EA FC 25</p>
-                <p>2. NBA 2K26</p>
-                <p>3. MLB 더 쇼 공략</p>
-                <p>4. 피파 온라인</p>
+                <p><a href="https://search.naver.com/search.naver?query=EA+FC+25" target="_blank">1. EA FC 25</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=NBA+2K26" target="_blank">2. NBA 2K26</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=MLB+더쇼+공략" target="_blank">3. MLB 더 쇼 공략</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=피파+온라인" target="_blank">4. 피파 온라인</a></p>
             </div>
             
             <!-- 문의 사항 배너 -->

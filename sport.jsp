@@ -4,7 +4,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>스포츠 게시판 - PlayCulture</title>
+    <title>Sports Zone</title>
     <style>
         body { margin: 0; font-family: "Segoe UI", sans-serif; background: #f4f4f4; color: #333; }
         header { background: #2c3e50; color: #fff; padding: 20px 0; text-align: center; }
@@ -54,7 +54,7 @@
 </head>
 <body>
     <header>
-        <h1>스포츠 게시판</h1>
+        <h1>Sports Zone</h1>
         <nav>
             <a href="index.jsp">메인</a>
             <a href="menu.jsp">스팀리뷰</a>
@@ -152,7 +152,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- 뉴스 리스트 영역 -->
             <div class="news-list">
                 <div class="news-item">
 				  <a href="https://www.youtube.com/watch?v=ifApGM5eZIk" target="_blank">
@@ -179,6 +179,15 @@
 				  <div>
 				    <h4>MLB 하이라이트</h4>
 				    <p>메이저리그 하이라이트</p>
+				  </div>
+				</div>
+				<div class="news-item">
+				  <a href="https://www.youtube.com/watch?v=vXJhItKCQBk" target="_blank">
+				    <img src="https://img.youtube.com/vi/vXJhItKCQBk/hqdefault.jpg" alt="v리그 하이라이트">
+				  </a>
+				  <div>
+				    <h4>v리그 하이라이트</h4>
+				    <p>우리카드 vs 현대캐피탈</p>
 				  </div>
 				</div>
             </div>
@@ -234,7 +243,7 @@
     </div>
 
     <footer>
-        <p>© 2025 PlayCulture | 스포츠 커뮤니티</p>
+        <p>© 2025 Sports Zone | 스포츠 커뮤니티</p>
     </footer>
 </body>
 </html>

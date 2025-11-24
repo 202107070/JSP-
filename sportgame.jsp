@@ -6,7 +6,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>스포츠 게임 게시판 - PlayCulture</title>
+    <title>Game Point</title>
     <style>
         /* ==================================================================== */
         /* 1. 기본 및 공통 스타일 */
@@ -252,7 +252,7 @@
     
     <!-- 헤더 영역 -->
     <header>
-        <h1>스포츠 게임 게시판</h1>
+        <h1>Game Point</h1>
         <nav>
             <a href="index.jsp">메인</a>
             <a href="menu.jsp">스팀리뷰</a>
@@ -368,7 +368,6 @@
 
             <!-- 뉴스 리스트 영역 -->
             <div class="news-list">
-                <!-- 1. [EA FC] 대규모 밸런스 패치 노트 -->
                 <div class="news-item">
 				  <a href="https://www.youtube.com/watch?v=euXJAKGc4LM" target="_blank">
 				    <img src="https://img.youtube.com/vi/euXJAKGc4LM/hqdefault.jpg" alt="패치 노트">
@@ -379,7 +378,6 @@
 				  </div>
 				</div>
 
-                <!-- 2. [NBA 2K] 신규 시즌 이벤트 -->
                 <div class="news-item">
 				  <a href="https://www.youtube.com/watch?v=5lkMReLqixs" target="_blank">
 				    <img src="https://img.youtube.com/vi/5lkMReLqixs/hqdefault.jpg" alt="신규 시즌">
@@ -389,7 +387,6 @@
 				    <p>시즌 2 시작</p>
 				  </div>
 				</div>
-                <!-- 3. [MLB 더 쇼] 차기작 개발 루머 -->
                  <div class="news-item">
 				  <a href="https://www.youtube.com/watch?v=iBXkMjO7lbY" target="_blank">
 				    <img src="https://img.youtube.com/vi/iBXkMjO7lbY/hqdefault.jpg" alt="신작 루머 이미지">
@@ -397,6 +394,15 @@
 				  <div>
 				    <h4>[MLB 더 쇼] 차기작 개발 루머</h4>
 				    <p>차기작의 새로운 기능</p>
+				  </div>
+				</div>
+				<div class="news-item">
+				  <a href="https://www.youtube.com/watch?v=IEej0noQMik" target="_blank">
+				    <img src="https://img.youtube.com/vi/IEej0noQMik/hqdefault.jpg" alt="이풋볼 업데이트">
+				  </a>
+				  <div>
+				    <h4>[efootball] 업데이트</h4>
+				    <p>신규 선수 업데이트</p>
 				  </div>
 				</div>
             </div>
@@ -457,7 +463,7 @@
 
     <!-- 푸터 영역 -->
     <footer>
-        <p>© 2025 PlayCulture | 스포츠 게임 커뮤니티</p>
+        <p>© 2025 Game Point | 스포츠 게임 커뮤니티</p>
     </footer>
 </body>
 </html>

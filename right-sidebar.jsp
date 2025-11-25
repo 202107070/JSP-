@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+
 <!-- 오른쪽 사이드 -->
 <div class="right-sidebar">
 
@@ -17,5 +17,19 @@
 		<p>8. 현대백화점</p>
 		<p>9. 방탄소년단</p>
 		<p>10. 리그오브레전드</p>
+	</div>
+
+	<div class="section">
+		<h2>🔗 유용한 외부 링크</h2>
+		<ul style="list-style: none; padding: 0;">
+			<li style="margin-bottom: 8px;"><a
+				href="https://store.steampowered.com/" target="_blank"
+				style="color: #333;">[게임] 스팀 상점 페이지</a></li>
+			<li style="margin-bottom: 8px;"><a
+				href="https://www.melon.com/chart/index.htm" target="_blank"
+				style="color: #333;">[음악] 멜론 TOP 100</a></li>
+			<li style="margin-bottom: 8px;"><a href="https://www.imdb.com/"
+				target="_blank" style="color: #333;">[영화] IMDB 영화 랭킹</a></li>
+		</ul>
 	</div>
 </div>

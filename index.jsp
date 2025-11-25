@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
 <%
-// board.jsp와 동일하게 application 영역에서 posts 리스트를 가져옵니다.
+// boardmain.jsp와 동일하게 application 영역에서 posts 리스트를 가져옵니다.
 List<String> posts = (List<String>) application.getAttribute("posts");
 if (posts == null) {
 	posts = new ArrayList<>();
@@ -259,17 +259,18 @@ nav a:hover {
 	cursor: pointer;
 }
 
-.login-box button:hover {
-	background: #2980b9;
-}
-
 footer {
-	background: #2c3e50;
+	background: #f4f4f4;
 	color: #aaa;
 	text-align: center;
 	padding: 15px;
 	margin-top: 30px;
 	font-size: 13px;
+}
+footer hr {
+	background: #DDDDDD;
+	height: 1px;
+	border: none;
 }
 /* 1. 전체 컨테이너 설정: 가로 배치 */
 .header-container {
@@ -347,7 +348,10 @@ footer {
 	<!-- 메인 컨테이너 -->
 	<div class="container">
 		<div class="banner-ad">
-			<img src="https://i.imgur.com/your-left-ad-1.jpg" alt="좌측 광고 1">
+			<a
+				href="https://www.yuhan.co.kr/Main/">
+				<img src="https://doctorsnews.co.kr/news/photo/202511/162187_133261_5053.png">
+			</a>
 		</div>
 		<!-- 왼쪽 사이드 -->
 
@@ -443,7 +447,7 @@ footer {
 							// 클릭 시 조회수를 증가시키기 위해 JavaScript 함수 호출 (3단계 참고)
 						%>
 						<li class="board-item <%=isNew ? "new" : ""%>" data-index="<%=i%>"><a
-							href="board.jsp?view=<%=i%>" onclick="increaseView(<%=i%>)">
+							href="boardmain.jsp?view=<%=i%>" onclick="increaseView(<%=i%>)">
 								<%=postContent.length() > 30 ? postContent.substring(0, 30) + "..." : postContent%>
 						</a> <span class="meta"> [<%=isNew ? "N" : viewCount%>]
 						</span></li>
@@ -459,6 +463,93 @@ footer {
 						%>
 					</ul>
 				</div>
+				<hr style="margin: 40px 0; border: 1px solid #ddd;">
+    
+    <div class="section updates-section">
+        <h2>🚀 주요 업데이트 및 패치 노트</h2>
+        <div class="news-list" style="margin-top: 15px;">
+            <div class="news-item">
+                <img src="[URL_패치노트_1]" alt="패치 노트 이미지">
+                <div>
+                    <h4>[발로란트] 7.12 대규모 밸런스 패치</h4>
+                    <p>신규 에이전트 너프 및 맵 로테이션 변경 사항 총정리.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="[URL_패치노트_2]" alt="패치 노트 이미지">
+                <div>
+                    <h4>[스타필드] 넥스트 제너레이션 그래픽 업데이트</h4>
+                    <p>4K 해상도 지원 및 프레임 속도 개선 내용 공식 발표.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+    <div class="section video-section">
+        <h2>📺 인기 동영상 하이라이트</h2>
+        <div class="thumbnail-grid">
+            <div class="card">
+                <img src="[URL_유튜브_1]" alt="유튜브 썸네일">
+                <div class="card-content">
+                    <h3>[ASMR] 아이유의 노래 듣고 자는 ASMR</h3>
+                    <p>잔잔한 감성으로 편안한 잠을 청하세요.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="[URL_유튜브_2]" alt="유튜브 썸네일">
+                <div class="card-content">
+                    <h3>[게임 리뷰] 출시 예정인 기대작 TOP 5</h3>
+                    <p>2025년 가장 기대되는 신작 게임 미리보기.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="[URL_유튜브_3]" alt="유튜브 썸네일">
+                <div class="card-content">
+                    <h3>[영화 리뷰] 2025년 아카데미 시상식 예측</h3>
+                    <p>작품상 후보 예측과 분석.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+    <div class="section gallery-section">
+        <h2>📸 커뮤니티 BEST 갤러리</h2>
+        <div class="thumbnail-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="card">
+                <img src="[URL_갤러리_1]" alt="팬아트">
+                <div class="card-content">
+                    <h3>[팬아트] 듄의 스틸레토</h3>
+                    <p>by 유저A</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="[URL_갤러리_2]" alt="코스프레">
+                <div class="card-content">
+                    <h3>[코스프레] 발로란트 제트</h3>
+                    <p>by 유저B</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="[URL_갤러리_3]" alt="음식">
+                <div class="card-content">
+                    <h3>[자유] 주말에 만든 특제 라면</h3>
+                    <p>by 유저C</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="[URL_갤러리_4]" alt="게임 스크린샷">
+                <div class="card-content">
+                    <h3>[스크린샷] 스타필드 은하수</h3>
+                    <p>by 유저D</p>
+                </div>
+            </div>
+        </div>
+    </div>
+				
 			</div>
 		</div>
 
@@ -466,7 +557,10 @@ footer {
 
 		<%@ include file="right-sidebar.jsp"%>
 		<div class="banner-ad">
-			<img src="https://i.imgur.com/your-right-ad-1.jpg" alt="우측 광고 1">
+			<a
+				href="https://www.yuhan.co.kr/Main/">
+				<img src="https://doctorsnews.co.kr/news/photo/202511/162187_133261_5053.png">
+			</a>
 		</div>
 	</div>
 

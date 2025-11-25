@@ -1,24 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <style>
-header {
-	background: #2c3e50;
-	color: #fff;
-	padding: 40px 0 0 0;
-	text-align: center;
-}
 
+header {
+	background: #f4f4f4;
+	color: #fff;
+	padding: 0;
+}
+.header-main-content {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    padding: 20px 0; /* 기존 header의 상하 패딩을 이리로 옮김 */
+    width: 800px; /* 내용물 크기만큼 너비를 설정 */
+    margin: 0 auto;
+}
 header h1 {
 	margin: 0;
-	margin-bottom: 20px;
-	font-size: 24px;
+	margin-right: 30px;
+	font-size: 40px;
 }
 
 header h1 a{
-	color: inherit;
+	color: #C90000;
 	text-decoration: none;
 }
-
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 500px; /* 검색창 너비 지정 */
+    max-width: 40%;
+    height: 45px; 
+    
+    /* 인벤의 붉은 테두리 */
+    border: 3px solid #b91c1c; 
+    border-radius: 25px; 
+    overflow: hidden;
+    background: white; /* 입력 필드 배경색 */
+}
+.search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    /* placeholder 텍스트 스타일 */
+    text-align: left;
+}
+.search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #b91c1c; /* 돋보기 색상 */
+    font-size: 24px;
+    padding: 0 15px;
+}
 header hr {
 	background: #DDDDDD;
 	margin: 0;
@@ -86,6 +123,7 @@ nav a:hover {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	z-index: 10;
 	background: #EAEAEA;
+	border-radius: 6px;
 }
 
 .submenu a {
@@ -95,7 +133,15 @@ nav a:hover {
 }
 </style>
 <header>
-	<h1><a href="index.jsp">yuven</a></h1>
+	<div class="header-main-content">
+        <h1><a href="index.jsp">yuven</a></h1>
+        
+        <form class="search-bar" action="#">
+            <input type="text" placeholder="검색어를 입력해 주세요" class="search-input">
+            <button type="submit" class="search-button">🔍</button>
+        </form>
+    </div>
+	<hr>
 	<nav>
 		<div class="dropdown">
 			<button class="dropdown-btn">게임</button>

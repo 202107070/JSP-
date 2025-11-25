@@ -14,20 +14,21 @@
 	padding: 10px;
 	margin: 2px 2px;
 	border: 2px solid #ccc;
-	background: #3498db;
+	background: #C90000;
 	color: white;
 	font-weight: bold;
 	border-radius: 4px;
 	cursor: pointer;
 }
 
-.login-box button:hover {
-	background: #2980b9;
+.login-box h4 {
+	font-weight: natural;
 }
+
 </style>
 
 <div class="section login-box">
-	<h2>로그인</h2>
+	<h4>유벤에 로그인 하세요</h4>
 	<form action="loginAction.jsp" method="post">
 		<input type="text" name="userid" placeholder="아이디"> <input
 			type="password" name="password" placeholder="비밀번호">

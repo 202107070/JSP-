@@ -273,17 +273,19 @@ nav a:hover {
 	cursor: pointer;
 }
 
-.login-box button:hover {
-	background: #2980b9;
-}
 
 footer {
-	background: #2c3e50;
+	background: #f4f4f4;
 	color: #aaa;
 	text-align: center;
 	padding: 15px;
 	margin-top: 30px;
 	font-size: 13px;
+}
+footer hr {
+	background: #DDDDDD;
+	height: 1px;
+	border: none;
 }
 /* 1. 전체 컨테이너 설정: 가로 배치 */
 .header-container {
@@ -343,3 +345,4 @@ footer {
 	padding: 0 15px;
 	transition: background-color 0.2s;
 }
+

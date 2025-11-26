@@ -148,6 +148,8 @@
       <ul>
         <li><a href="/index.jsp">메뉴</a></li> 
         <li><a href="Board.jsp">게시글</a></li> 
+        <li><a href="sport.jsp">스포츠</a></li>
+		<li><a href="sportgame.jsp">스포츠게임</a></li>
       </ul>
     </nav>
     <div>

@@ -147,7 +147,11 @@
     <nav>
       <ul>
         <li><a href="/index.jsp">메뉴</a></li> 
+<<<<<<< HEAD
         <li><a href="Board.jsp">게시글</a></li> 
+=======
+        <li><a href="Board.jsp">게시글</a></li>
+>>>>>>> 9eae4b413e18793660cf9d8106f604bfc51fe7a9
         <li><a href="sport.jsp">스포츠</a></li>
 		<li><a href="sportgame.jsp">스포츠게임</a></li>
       </ul>

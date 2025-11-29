@@ -1,30 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Game Point</title>
     <style>
-        /* ==================================================================== */
-        /* 1. 기본 및 공통 스타일 */
-        /* ==================================================================== */
-        body { 
-            margin: 0; 
-            font-family: "Segoe UI", sans-serif; 
-            background: #f4f4f4; 
-            color: #333; 
-        }
+       body {
+	    margin: 0;
+	    font-family: "Segoe UI", sans-serif;
+	    color: #333;
+    
+	    /* 1. 페이지 기본 배경색 (이 색상과 자연스럽게 이어지게 합니다) */
+	    background-color: #f4f4f4;
+	    
+	    /* 2. 배경 이미지 설정 (순서 중요: 맨 위 코드가 가장 위에 쌓입니다) */
+	    background-image: 
+        /* [층 1] 맨 위: 하단 페이드 아웃 효과 */
+        /* 위쪽(0%~70%)은 투명하다가, 아래쪽(100%)으로 갈수록 배경색(#f4f4f4)이 됨 */
+        linear-gradient(to bottom, rgba(244,244,244,0) 90%, #f4f4f4 100%),
+        
+        /* [층 2] 중간: 상단 글씨 가독성을 위한 그림자 (선택 사항) */
+        linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 30%),
+        
+        /* [층 3] 맨 아래: 실제 배경 사진 */
+        url('202207015_image/background2.png'); /* 여기에 실제 파일명을 넣으세요 */
+        
+	    /* 이미지 반복 방지 */
+	    background-repeat: no-repeat;
+	    
+	    /* 가로 100%, 세로 60vh (화면 높이의 60%) */
+	    background-size: 100% 80vh;
+	    
+	    /* 위치 상단 고정 */
+	    background-position: top center;
+}
         
         /* 헤더 스타일 */
-        header { 
-            background: #2c3e50; 
-            color: #fff; 
-            padding: 20px 0; 
-            text-align: center; 
-        }
+       header {
+		    /* 배경색을 완전 투명하게 설정 */
+		    background: transparent;
+		    
+		    /* 글씨 색상 (흰색 유지) */
+		    color: #fff;
+		    
+		    /* 여백 및 정렬 */
+		    padding: 20px 0;
+		    text-align: center;
+		    
+		    /* (선택 사항) 배경 이미지 때문에 글씨가 잘 안 보일 수 있어 그림자 추가 */
+		    text-shadow: 1px 1px 3px rgba(0,0,0, 0.8);
+		}
         nav { 
             margin-top: 10px; 
         }

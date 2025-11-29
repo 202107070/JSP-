@@ -1,30 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>스포츠 게임 게시판 - PlayCulture</title>
+    <title>Game Point</title>
     <style>
-        /* ==================================================================== */
-        /* 1. 기본 및 공통 스타일 */
-        /* ==================================================================== */
-        body { 
-            margin: 0; 
-            font-family: "Segoe UI", sans-serif; 
-            background: #f4f4f4; 
-            color: #333; 
-        }
+       body {
+	    margin: 0;
+	    font-family: "Segoe UI", sans-serif;
+	    color: #333;
+    
+	    /* 1. 페이지 기본 배경색 (이 색상과 자연스럽게 이어지게 합니다) */
+	    background-color: #f4f4f4;
+	    
+	    /* 2. 배경 이미지 설정 (순서 중요: 맨 위 코드가 가장 위에 쌓입니다) */
+	    background-image: 
+        /* [층 1] 맨 위: 하단 페이드 아웃 효과 */
+        /* 위쪽(0%~70%)은 투명하다가, 아래쪽(100%)으로 갈수록 배경색(#f4f4f4)이 됨 */
+        linear-gradient(to bottom, rgba(244,244,244,0) 90%, #f4f4f4 100%),
+        
+        /* [층 2] 중간: 상단 글씨 가독성을 위한 그림자 (선택 사항) */
+        linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 30%),
+        
+        /* [층 3] 맨 아래: 실제 배경 사진 */
+        url('202207015_image/background2.png'); /* 여기에 실제 파일명을 넣으세요 */
+        
+	    /* 이미지 반복 방지 */
+	    background-repeat: no-repeat;
+	    
+	    /* 가로 100%, 세로 60vh (화면 높이의 60%) */
+	    background-size: 100% 80vh;
+	    
+	    /* 위치 상단 고정 */
+	    background-position: top center;
+}
         
         /* 헤더 스타일 */
-        header { 
-            background: #2c3e50; 
-            color: #fff; 
-            padding: 20px 0; 
-            text-align: center; 
-        }
+       header {
+		    /* 배경색을 완전 투명하게 설정 */
+		    background: transparent;
+		    
+		    /* 글씨 색상 (흰색 유지) */
+		    color: #fff;
+		    
+		    /* 여백 및 정렬 */
+		    padding: 20px 0;
+		    text-align: center;
+		    
+		    /* (선택 사항) 배경 이미지 때문에 글씨가 잘 안 보일 수 있어 그림자 추가 */
+		    text-shadow: 1px 1px 3px rgba(0,0,0, 0.8);
+		}
         nav { 
             margin-top: 10px; 
         }
@@ -47,6 +74,11 @@
         .section p a {		
             display: block; 
             padding: 2px 0; 
+            transition: color 0.2s;
+        }
+        .section p a:hover {
+            color: #3498db;
+            text-decoration: underline;
         }
 
         /* ==================================================================== */
@@ -247,9 +279,10 @@
     
     <!-- 헤더 영역 -->
     <header>
-        <h1>스포츠 게임 게시판</h1>
+        <h1>Game Point</h1>
         <nav>
             <a href="index.jsp">메인</a>
+            <a href="menu.jsp">스팀리뷰</a>
         </nav>
     </header>
 
@@ -271,9 +304,9 @@
             <!-- 주요 게임 정보 섹션 -->
             <div class="section">
                 <h2>주요 게임 정보</h2>
-                <p><a href="https://www.ea.com/ko-kr/games/ea-sports-fc">🎮 EA FC 공식 사이트</a></p>
-                <p><a href="https://nba.2k.com/">🏀 NBA 2K 공식 사이트</a></p>
-                <p><a href="https://mlbtheshow.com/">⚾ MLB 더 쇼 공식 사이트</a></p>
+                <p><a href="https://www.ea.com/ko-kr/games/ea-sports-fc" target="_blank">🎮 EA FC 공식 사이트</a></p>
+                <p><a href="https://nba.2k.com/" target="_blank">🏀 NBA 2K 공식 사이트</a></p>
+                <p><a href="https://mlbtheshow.com/" target="_blank">⚾ MLB 더 쇼 공식 사이트</a></p>
             </div>
             
             <!-- 스포츠 게임 역사 섹션 -->
@@ -284,13 +317,13 @@
                 <p><a href="https://www.youtube.com/watch?v=_tU0Knysv8E" target="_blank">🏀 NBA 2K, 리얼리즘의 시작</a></p>             
             </div>
             
-            <!-- 주간 메타 변화 섹션 -->
+            <!-- 주간 메타 변화 섹션 (링크 적용) -->
             <div class="section">
 	            <h2>📈 주간 메타 변화</h2>
-	            <p>✔️ EA FC: 수비수 성능 버프</p>
-	            <p>✔️ MLB 더 쇼: 투수 변화구 메타</p>
-	            <p>✔️ NBA 2K: 신규 슈팅 배지 등장</p>
-                <p>✔️ 마구마구: 새로운 레전드 카드</p>
+	            <p><a href="https://search.naver.com/search.naver?query=EA+FC+수비수+성능+버프" target="_blank">✔️ EA FC: 수비수 성능 버프</a></p>
+	            <p><a href="https://search.naver.com/search.naver?query=MLB+더+쇼+투수+변화구+메타" target="_blank">✔️ MLB 더 쇼: 투수 변화구 메타</a></p>
+	            <p><a href="https://search.naver.com/search.naver?query=NBA+2K+신규+슈팅+배지" target="_blank">✔️ NBA 2K: 신규 슈팅 배지 등장</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=마구마구+새로운+레전드+카드" target="_blank">✔️ 마구마구: 새로운 레전드 카드</a></p>
         	</div>
         </div>
 
@@ -362,7 +395,6 @@
 
             <!-- 뉴스 리스트 영역 -->
             <div class="news-list">
-                <!-- 1. [EA FC] 대규모 밸런스 패치 노트 -->
                 <div class="news-item">
 				  <a href="https://www.youtube.com/watch?v=euXJAKGc4LM" target="_blank">
 				    <img src="https://img.youtube.com/vi/euXJAKGc4LM/hqdefault.jpg" alt="패치 노트">
@@ -373,7 +405,6 @@
 				  </div>
 				</div>
 
-                <!-- 2. [NBA 2K] 신규 시즌 이벤트 -->
                 <div class="news-item">
 				  <a href="https://www.youtube.com/watch?v=5lkMReLqixs" target="_blank">
 				    <img src="https://img.youtube.com/vi/5lkMReLqixs/hqdefault.jpg" alt="신규 시즌">
@@ -383,7 +414,6 @@
 				    <p>시즌 2 시작</p>
 				  </div>
 				</div>
-                <!-- 3. [MLB 더 쇼] 차기작 개발 루머 -->
                  <div class="news-item">
 				  <a href="https://www.youtube.com/watch?v=iBXkMjO7lbY" target="_blank">
 				    <img src="https://img.youtube.com/vi/iBXkMjO7lbY/hqdefault.jpg" alt="신작 루머 이미지">
@@ -393,7 +423,24 @@
 				    <p>차기작의 새로운 기능</p>
 				  </div>
 				</div>
+				<div class="news-item">
+				  <a href="https://www.youtube.com/watch?v=IEej0noQMik" target="_blank">
+				    <img src="https://img.youtube.com/vi/IEej0noQMik/hqdefault.jpg" alt="이풋볼 업데이트">
+				  </a>
+				  <div>
+				    <h4>[efootball] 업데이트</h4>
+				    <p>신규 선수 업데이트</p>
+				  </div>
+				</div>
             </div>
+            
+            <!-- 한줄 뉴스 배너 모듈 포함 (뉴스 리스트 아래) -->
+            <!-- 
+                JSP Action Tag (jsp:include):
+                공통 UI 컴포넌트인 '한줄 뉴스(quickBoard.jsp)'를 재사용하기 위해 포함시킴.
+                모든 페이지에서 동일한 뉴스 데이터를 보여줌.
+            -->
+            <jsp:include page="quickBoard.jsp" />
         </div>
         
          <!-- 오른쪽 사이드바 (250px) -->
@@ -408,13 +455,13 @@
                 </form>
             </div>
             
-            <!-- 실시간 인기 검색 섹션 -->
+            <!-- 실시간 인기 검색 섹션 (링크 적용) -->
             <div class="section">
                 <h2>실시간 인기 검색</h2>
-                <p>1. EA FC 25</p>
-                <p>2. NBA 2K26</p>
-                <p>3. MLB 더 쇼 공략</p>
-                <p>4. 피파 온라인</p>
+                <p><a href="https://search.naver.com/search.naver?query=EA+FC+25" target="_blank">1. EA FC 25</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=NBA+2K26" target="_blank">2. NBA 2K26</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=MLB+더쇼+공략" target="_blank">3. MLB 더 쇼 공략</a></p>
+                <p><a href="https://search.naver.com/search.naver?query=피파+온라인" target="_blank">4. 피파 온라인</a></p>
             </div>
             
             <!-- 문의 사항 배너 -->
@@ -443,7 +490,7 @@
 
     <!-- 푸터 영역 -->
     <footer>
-        <p>© 2025 PlayCulture | 스포츠 게임 커뮤니티</p>
+        <p>© 2025 Game Point | 스포츠 게임 커뮤니티</p>
     </footer>
 </body>
 </html>

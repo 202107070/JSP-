@@ -4,13 +4,17 @@
     // ====================================================================
     // 1. 요청 파라미터 처리 (Form Processing)
     // ====================================================================
-    // 한글 데이터가 깨지지 않도록 요청 인코딩을 UTF-8로 설정
+    
+    // JSP API: request.setCharacterEncoding()
+    // 클라이언트가 전송한 한글 데이터가 깨지지 않도록 인코딩을 UTF-8로 설정합니다.
     request.setCharacterEncoding("UTF-8");
 
-    // 폼에서 전송된 파라미터 값 받기 (JSP API 사용)
+    // JSP API: request.getParameter()
+    // HTML Form 태그 내의 input 요소들에 입력된 값을 name 속성을 기준으로 받아옵니다.
     String name = request.getParameter("name");
     String email = request.getParameter("email");
     String content = request.getParameter("content");
+    
     // hidden 필드로부터 문의를 요청한 원래 페이지 URL을 받음
     String returnUrl = request.getParameter("returnUrl"); 
     

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
+		// register.jsp에서 값을 요청 후 받아와서 처리함.
 		String user_id = request.getParameter("id");
 		String user_pw = request.getParameter("passwd");
 		String user_name = request.getParameter("name");
@@ -9,12 +10,13 @@
 		
 		if(user_id.equals("admin") && user_pw.equals("1234") && user_name.equals("홍길동")
 				&& user_phone.equals("010-1234-5678") && user_email.equals("abcde@yuhan.ac.kr"))
-		{
-			session.setAttribute("userID", user_id);
-			session.setAttribute("userPW", user_pw);
-			session.setAttribute("userNAME", user_name);
-			session.setAttribute("userPHONE", user_phone);
-			session.setAttribute("userEMAIL", user_email);
+		{	// 여기서 세션을 설정 후 loginbox.jsp에서 세션 정보를 받아씀.
+			// 자동 로그인 방지를 위해 loginAction.jsp에서 세션 설정
+			//session.setAttribute("userID", user_id);
+			//session.setAttribute("userPW", user_pw);
+			//session.setAttribute("userNAME", user_name);
+			//session.setAttribute("userPHONE", user_phone);
+			//session.setAttribute("userEMAIL", user_email);
 			out.println("<script>alert('yuven 회원이 되신걸 환영합니다.');");
 			out.println("location.href = 'index.jsp';</script>");
 		}

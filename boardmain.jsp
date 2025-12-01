@@ -45,6 +45,7 @@ if (posts == null) {
 	posts.add(new Post(posts.size(), "🎵 **음악** 장르별 추천 목록", "잔잔한 발라드 위주로 부탁드려요."));
 	posts.add(new Post(posts.size(), "🎬 **영화** '듄 2' 개봉 임박 후기", "기대 이상입니다. 꼭 보세요."));
 	posts.add(new Post(posts.size(), "스포츠 뉴스 하이라이트", "손흥민 선수의 골 소식입니다."));
+	//서버 상에 저장함
 	application.setAttribute("posts", posts);
 }
 

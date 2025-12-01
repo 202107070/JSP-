@@ -112,6 +112,7 @@ button:hover, input[type="button"]:hover {
 </style>
 </head>
 <script type="text/javascript">
+	//핸들러 함수를 이용한 유효성 검사
 	function checkMember() {
 
 		var regExpId = /^[a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
@@ -205,7 +206,7 @@ button:hover, input[type="button"]:hover {
 						placeholder="1234" required> - <input type="text"
 						maxlength="4" size="4" name="phone3" placeholder="5678" required>
 				</div>
-
+				<!-- 핸들러 함수 호출, 유효성 검사 실시 -->
 				<button type="button" onclick="checkMember()">가입하기</button>
 
 				<input type="button" value="메인으로"

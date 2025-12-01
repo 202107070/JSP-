@@ -346,3 +346,29 @@ footer hr {
 	transition: background-color 0.2s;
 }
 
+/* ⭐️ 투표 막대 그래프 스타일 ⭐️ */
+
+.poll-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 4px;
+}
+
+.poll-bar {
+    /* ⚠️ 초기 너비는 0으로 설정하여 숨깁니다. */
+    width: 0; 
+    height: 100%;
+    background-color: #3498db; /* 그래프 색상 */
+    border-radius: 5px;
+    
+    /* ⭐️ 애니메이션 효과: 1초 동안 부드럽게 너비 변화 ⭐️ */
+    transition: width 1.0s ease-out; 
+}

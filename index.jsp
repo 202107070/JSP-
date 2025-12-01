@@ -395,48 +395,7 @@ footer hr {
 				</div>
 			</div>
 
-			<hr style="margin: 40px 0; border: 1px solid #ddd;">
 
-			<div class="section hot-posts-section">
-				<h2>🔥 실시간 HOT 게시글</h2>
-				<ul class="post-list"
-					style="list-style: none; padding: 0; line-height: 1.8;">
-					<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[자유]
-						주말에 영화 '퓨리오사' 보고 왔습니다. 스포O</li>
-					<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[게임]
-						현 메타에서 발로란트 제트 너프 체감이 크나요?</li>
-					<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[음악]
-						아이유 신곡 이번 멜론 차트에서 몇 위 예상?</li>
-					<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[유머]
-						내 컴퓨터 본체 안에 고양이 들어있음 ㅋㅋㅋ</li>
-					<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[정보]
-						넷플릭스 12월 신작 정리표 (꼭 봐야 할 것!)</li>
-					<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[질문]
-						스타필드 확장팩 버그 때문에 진행이 안되는데 해결방법 아시는분?</li>
-				</ul>
-			</div>
-
-			<hr style="margin: 40px 0; border: 1px solid #ddd;">
-
-			<div class="section qna-section">
-				<h2>💡 개발자 업데이트 Q&A</h2>
-				<div class="news-list">
-					<div class="news-item" style="gap: 10px;">
-						<div style="font-size: 14px;">
-							<h4 style="color: #3498db;">Q. 밸런스 패치는 언제쯤 되나요?</h4>
-							<p style="color: #555;">A. 다음 주 화요일 오전 10시에 적용될 예정이며, 테스트 서버를
-								통해 미리 확인하실 수 있습니다.</p>
-						</div>
-					</div>
-					<div class="news-item" style="gap: 10px;">
-						<div style="font-size: 14px;">
-							<h4 style="color: #3498db;">Q. 서버 불안정 문제가 계속 발생합니다.</h4>
-							<p style="color: #555;">A. 해당 문제는 DDoS 공격과 관련된 것으로 파악되어, 현재
-								보안팀에서 긴급 조치 중입니다.</p>
-						</div>
-					</div>
-				</div>
-			</div>
 			<!-- 뉴스/최신 동향 -->
 			<div class="news-list">
 				<div class="news-item">
@@ -467,6 +426,26 @@ footer hr {
 						<h4>[영화] 어벤져스 신작 루머</h4>
 						<p>마블 차기작에 대한 새로운 정보 유출!</p>
 					</div>
+				</div>
+				<hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+				<div class="section hot-posts-section">
+					<h2>🔥 실시간 HOT 게시글</h2>
+					<ul class="post-list"
+						style="list-style: none; padding: 0; line-height: 1.8;">
+						<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[자유]
+							주말에 영화 '퓨리오사' 보고 왔습니다. 스포O</li>
+						<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[게임]
+							현 메타에서 발로란트 제트 너프 체감이 크나요?</li>
+						<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[음악]
+							아이유 신곡 이번 멜론 차트에서 몇 위 예상?</li>
+						<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[유머]
+							내 컴퓨터 본체 안에 고양이 들어있음 ㅋㅋㅋ</li>
+						<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[정보]
+							넷플릭스 12월 신작 정리표 (꼭 봐야 할 것!)</li>
+						<li style="border-bottom: 1px dotted #eee; padding: 5px 0;">[질문]
+							스타필드 확장팩 버그 때문에 진행이 안되는데 해결방법 아시는분?</li>
+					</ul>
 				</div>
 
 				<div class="board-list">
@@ -505,6 +484,30 @@ footer hr {
 						%>
 					</ul>
 				</div>
+
+				<hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+				<div class="section qna-section">
+					<h2>💡 개발자 업데이트 Q&A</h2>
+					<div class="news-list">
+						<div class="news-item" style="gap: 10px;">
+							<div style="font-size: 14px;">
+								<h4 style="color: #3498db;">Q. 밸런스 패치는 언제쯤 되나요?</h4>
+								<p style="color: #555;">A. 다음 주 화요일 오전 10시에 적용될 예정이며, 테스트
+									서버를 통해 미리 확인하실 수 있습니다.</p>
+							</div>
+						</div>
+						<div class="news-item" style="gap: 10px;">
+							<div style="font-size: 14px;">
+								<h4 style="color: #3498db;">Q. 서버 불안정 문제가 계속 발생합니다.</h4>
+								<p style="color: #555;">A. 해당 문제는 DDoS 공격과 관련된 것으로 파악되어, 현재
+									보안팀에서 긴급 조치 중입니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 				<hr style="margin: 40px 0; border: 1px solid #ddd;">
 
 				<div class="section updates-section">
